@@ -320,17 +320,18 @@ img{
 
 .home__title{
 	font-size: var(--big-font-size);
-	color: #FFF;
+	color: var(--title-color);
 }
 
 .home__subtitle{
 	font-size: var(--h3-font-size);
-	color: var(--text-color);
+	color: var(--title-color);
 	font-weight: var(--font-medium);
 	margin-bottom: var(--mb-0-75);
 }
 
 .home__description{
+	color: var(--title-color);
 	margin-bottom: var(--mb-2);
 }
 
@@ -353,7 +354,7 @@ img{
 
 .home__scroll-name{
 	font-size: var(--small-font-size);
-	color: var(--text-color);
+	color: var(--title-color);
 	font-weight: var(--font-medium);
 	margin-right: var(--mb-0-25);
 }
@@ -1363,7 +1364,7 @@ textarea.input{
 		width: 180px;
 	}
 	.home__title{
-		color: #FFF;
+		color: var(--title-color);
 	}
 
 	.contact__container,
