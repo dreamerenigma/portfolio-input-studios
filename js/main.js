@@ -77,19 +77,24 @@ let modal = function(modalClick){
 	modalViews[modalClick].classList.add('active-modal')
 }
 
+
+
 modalBtns.forEach((modalBtn, i) => {
 	modalBtn.addEventListener('click', () => {
 		modal(i)
+		document.getElementsByTagName('body')[0].style.overflow = 'hidden';
 	})
 })
 
 modalCloses.forEach((modalClose) => {
 	modalClose.addEventListener('click', () => {
-		modalViews.forEach((modalView) =>{
+		modalViews.forEach((modalView) => {
 			modalView.classList.remove('active-modal')
+			document.getElementsByTagName('body')[0].style.overflow = 'visible';
 		})
 	})
 })
+
 
 /*==================== MIXTUP FILTER PORTFOLIO ====================*/
 let mixerPortfolio = mixitup('.portfolio__container', {
@@ -121,11 +126,13 @@ document.addEventListener("click", (e) =>{
 
 function togglePortfolioPopup(){
 	document.querySelector(".portfolio__popup").classList.toggle("open");
+	document.getElementsByTagName('body')[0].style.overflow = 'visible';
 }
 
-document.querySelector(".portfolio__popup-close").addEventListener("click", togglePortfolioPopup)
+document.querySelector(".portfolio__popup-close").addEventListener("click", togglePortfolioPopup);
 
 function portfolioItemDetails(portfolioItem){
+	document.getElementsByTagName('body')[0].style.overflow = 'hidden'; // the default for the css property
 	document.querySelector(".pp__thumbnail img").src = portfolioItem.querySelector(".portfolio__img").src;
 	document.querySelector(".portfolio__popup-subtitle span").innerHTML = portfolioItem.querySelector(".portfolio__title").innerHTML;
 	document.querySelector(".portfolio__popup-body").innerHTML = portfolioItem.querySelector(".portfolio__item-details").innerHTML;
@@ -241,36 +248,3 @@ themeButton.addEventListener('click', () => {
 	localStorage.setItem('selected-theme', getCurrentTheme())
 	localStorage.setItem('selected-icon', getCurrentIcon())
 })
-
-/*======================== LANGUAGE SWITCHING MODE ========================*/
-const select = document.querySelector('select');
-const allLang = ['en', 'ru'];
-
-select.addEventListener('change', changeURLLanguage);
-
-// перенаправить на url с указанием языка
-function changeURLLanguage() {
-	let lang = select.value;
-	location.href = window.location.pathname + '#'+lang;
-	location.reload();
-}
-
-function changeLanguage() {
-	let hash = window.location.hash;
-	hash = hash.substring(1);
-	console.log(hash);
-	if (!allLang.includes(hash)) {
-		location.href = window.location.pathname + '#en';
-		location.reload();
-	}
-	select.value = hash;
-	//document.querySelector('lng-nav__logo').innerHTML = langArr['nav__logo'][hash];
-	for (let key in langArr) {
-		let elem = document.querySelector('.lng-'+key);
-		if(elem) {
-			elem.innerHTML = langArr[key][hash];
-		}
-	}
-}
-
-changeLanguage();

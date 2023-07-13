@@ -4,17 +4,16 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
+		<!--===================== ICON =====================-->
+		<link rel="icon" href="./img/favicon.ico" type="image/ico">
 		<!--===================== UNICONS =====================-->
 		<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-		
 		<!--===================== SWIPER CSS =====================-->
 		<link rel="stylesheet" href="./css/swiper-bundle.min.css">
-
 		<!--===================== CSS =====================-->
 		<link rel="stylesheet" href="./css/style.css">
-
-		<title>Responsive Portfolio Website</title>
+		
+		<title class="lng-title">Responsive Portfolio Website</title>
 	</head>
 	<body>
 
@@ -22,7 +21,6 @@
 		<header class="header" id="header">
 			<nav class="nav container">
 				<a href="#" class="lng-nav__logo">Andrey</a>
-
 				<div class="nav__menu" id="nav-menu">
 					<ul class="nav__list grid">
 						<li class="nav__item">
@@ -64,6 +62,7 @@
 					<select class="change-lang">
 						<option value="ru" selected>RU</option>
 						<option value="en">EN</option>
+						<option value="es">ES</option>
 					</select>
 
 				<div class="nav__btns">
@@ -98,19 +97,19 @@
 								<img src="./img/bg_image.png" alt="">
 							</div>
 							<div class="home__data">
-								<h1 class="home__title">Hi, I'am Andrey</h1>
-								<h3 class="home__subtitle">Fullstack developer</h3>
-								<p class="home__description">High level experience in web design and development
+								<h1 class="lng-home__title">Hi, I'am Andrey</h1>
+								<h3 class="lng-home__subtitle">Fullstack-developer</h3>
+								<p class="lng-home__description">High level experience in web design and development
 									knowledge, producing quality work.</p>
 									<a href="#contact" class="button button--flex">
-										Contact Me <i class="uil uil-message button__icon"></i>
+										<span class="lng-home__send">Contact Me</span> <i class="uil uil-message button__icon"></i>
 									</a>
 							</div>
 						</div>
 						<div class="home__scroll">
 							<a href="#about" class="home__scroll-button button--flex">
 								<i class="uil uil-mouse-alt home__scroll-mouse"></i>
-								<span class="home__scroll-name">Scroll down</span>
+								<span class="lng-home__scroll-name">Scroll down</span>
 								<i class="uil uil-arrow-down home__scroll-arrow"></i>
 							</a>
 						</div>
@@ -119,33 +118,27 @@
 
 				<!--==================== ABOUT ====================-->
 				<section class="about section" id="about">
-						<h2 class="section__title">About Me</h2>
-						<span class="section__subtitle">My introduction</span>
-
+						<h2 class="lng-section__title">About Me</h2>
+						<span class="lng-section__subtitle">My introduction</span>
 						<div class="about__container container grid">
 							<img src="./img/about.png" alt="" class="about__img">
-
 							<div class="about__data">
-								<p class="about__description">Web developer, with extensive knowledge and years of experience, 
+								<p class="lng-about__description">Web developer, with extensive knowledge and years of experience, 
 									working in web technologies and UI / UX design, delivering quality work.</p>
-
 								<div class="about__info">
 									<div>
 										<span class="about__info-title">08+</span>
-										<span class="about__info-name">Years <br> experience</span>
+										<span class="lng-about__info-year">Years <br> experience</span>
 									</div>
-
 									<div>
 										<span class="about__info-title">20+</span>
-										<span class="about__info-name">Completed <br> project</span>
+										<span class="lng-about__info-completed">Completed <br> projects</span>
 									</div>
-
 									<div>
 										<span class="about__info-title">05+</span>
-										<span class="about__info-name">Companies <br> worked</span>
+										<span class="lng-about__info-companies">Companies <br> worked</span>
 									</div>
 								</div>
-								
 								<div class="about__buttons">
 									<a href="./pdf/Andrey-Cv.pdf" class="button button--flex">
 										Download CV<i class="uil uil-download-alt button__icon"></i>
@@ -157,8 +150,8 @@
 
 				<!--==================== SKILLS ====================-->
 				<section class="skills section" id="skills">
-						<h2 class="section__title">Skills</h2>
-						<span class="section__subtitle">My techical level</span>
+						<h2 class="lng-section__title">Skills</h2>
+						<span class="lng-section__subtitle">My techical level</span>
 
 						<div class="skills__container container grid">
 							<div>
@@ -327,8 +320,8 @@
 
 				<!--==================== QUALIFICATION ====================-->
 				<section class="qualification section">
-					<h2 class="section__title">Qualification</h2>
-					<span class="section__subtitle">My personal journey</span>
+					<h2 class="lng-section__title">Qualification</h2>
+					<span class="lng-section__subtitle">My personal journey</span>
 
 					<div class="qualification__container container">
 						<div class="qualification__tabs">
@@ -389,7 +382,7 @@
 										<span class="qualification__subtitle">Ulyanovsk - Insitute</span>
 										<div class="qualification__calendar">
 											<i class="uil uil-calendar-alt"></i>
-											2020 -2023
+											2020 - 2025
 										</div>
 									</div>
 
@@ -413,7 +406,7 @@
 										<span class="qualification__subtitle">Ulyanovsk - Netology</span>
 										<div class="qualification__calendar">
 											<i class="uil uil-calendar-alt"></i>
-											2019 -2022
+											2020 - 2022
 										</div>
 									</div>
 								</div>
@@ -425,7 +418,7 @@
 								<div class="qualification__data">
 									<div>
 										<h3 class="qualification__title">Software Enginner</h3>
-										<span class="qualification__subtitle">Microsoft - Russia</span>
+										<span class="qualification__subtitle">SimbirskMplus - Ulyanovsk</span>
 										<div class="qualification__calendar">
 											<i class="uil uil-calendar-alt"></i>
 											2016 - 2018
@@ -448,21 +441,21 @@
 
 									<div>
 										<h3 class="qualification__title">Frontend Developer</h3>
-										<span class="qualification__subtitle">Apple Inc - Spain</span>
+										<span class="qualification__subtitle">Input Studios - Ulyanovsk</span>
 										<div class="qualification__calendar">
 											<i class="uil uil-calendar-alt"></i>
-											2018 - 2020
+											2020 - 2022
 										</div>
 									</div>
 								</div>
 								<!--==================== QUALIFICATION 3 ====================-->
 								<div class="qualification__data">
 									<div>
-										<h3 class="qualification__title">Ui Designer</h3>
+										<h3 class="qualification__title">UI Designer</h3>
 										<span class="qualification__subtitle">Figma - Russia</span>
 										<div class="qualification__calendar">
 											<i class="uil uil-calendar-alt"></i>
-											2017 -2019
+											2018 - 2020
 										</div>
 									</div>
 
@@ -478,8 +471,8 @@
 
 				<!--==================== SERVICES ====================-->
 				<section class="services section" id="services">
-						<h2 class="section__title">Services</h2>
-						<span class="section__subtitle">What i offer</span>
+						<h2 class="lng-section__title">Services</h2>
+						<span class="lng-section__subtitle">What i offer</span>
 
 						<div class="services__container container grid">
 							<!--==================== SERVICES 1 ====================-->
@@ -601,132 +594,136 @@
 				
 				<!--==================== PORTFOLIO ====================-->
 				<section class="portfolio section" id="portfolio">
-						<h2 class="section__title">My Portfolio</h2>
-						<span class="section__subtitle">Most recent work</span>
+					<h2 class="lng-section__title">My Portfolio</h2>
+					<span class="lng-section__subtitle">Most recent work</span>
 
-						<div class="portfolio__filters">
-							<span class="portfolio__item active-portfolio" data-filter="all">All</span>
-							<span class="portfolio__item" data-filter=".web">Web</span>
-							<span class="portfolio__item" data-filter=".app">App</span>
-							<span class="portfolio__item" data-filter=".design">Design</span>
+					<div class="portfolio__filters">
+						<span class="portfolio__item active-portfolio" data-filter="all">All</span>
+						<span class="portfolio__item" data-filter=".web">Web</span>
+						<span class="portfolio__item" data-filter=".app">App</span>
+						<span class="portfolio__item" data-filter=".design">Design</span>
+					</div>
+
+					<div class="portfolio__container container grid">
+						<!--==================== PORTFOLIO CARD 1 ====================-->
+						<div class="portfolio__card mix web">
+								<img src="./img/work-1.png" alt="" class="portfolio__img">
+								<h3 class="portfolio__title">Web Design</h3>
+								<span class="portfolio__button">Demo
+									<i class="uil uil-arrow-right portfolio__button-icon"></i>
+								</span>
+								<div class="portfolio__item-details">
+									<h3 class="details__title">The service provide for design</h3>
+									<p class="details__description">Online cinema with a built-in modern player with support 
+										for adjusting the speed of video playback</p>
+									<ul class="details__info">
+										<li>Created - <span>10 mar 2019</span></li>
+										<li>Techologies - <span>HTML CSS JS</span></li>
+										<li>Role - <span>Fullstack developer</span></li>
+										<li>View - <span><a href="#">www.domain.com</a></span></li>
+									</ul>
+								</div>
 						</div>
-
-						<div class="portfolio__container container grid">
-							<!--==================== PORTFOLIO CARD 1 ====================-->
-							<div class="portfolio__card mix web">
-									<img src="./img/work-1.png" alt="" class="portfolio__img">
-									<h3 class="portfolio__title">Web Design</h3>
-									<span class="portfolio__button">Demo
-										<i class="uil uil-arrow-right portfolio__button-icon"></i>
-									</span>
-									<div class="portfolio__item-details">
-										<h3 class="details__title">The service provide for design</h3>
-										<p class="details__description">Online cinema with a built-in modern player with support 
-											for adjusting the speed of video playback</p>
-										<ul class="details__info">
-											<li>Created - <span>10 mar 2019</span></li>
-											<li>Techologies - <span>HTML CSS JS</span></li>
-											<li>Role - <span>Fullstack developer</span></li>
-											<li>View - <span><a href="#">www.domain.com</a></span></li>
-										</ul>
-									</div>
-							</div>
-							<!--==================== PORTFOLIO CARD 2 ====================-->
-							<div class="portfolio__card mix app">
-									<img src="./img/work-2.png" alt="" class="portfolio__img">
-									<h3 class="portfolio__title">App Design</h3>
-									<span class="portfolio__button">Demo
-										<i class="uil uil-arrow-right portfolio__button-icon"></i>
-									</span>
-									<div class="portfolio__item-details">
-										<h3 class="details__title">Mobile app landing design & app maintain</h3>
-										<p class="details__description">Messenger for sending text and media messages, 
-											video and audio calls around the world</p>
-										<ul class="details__info">
-											<li>Created - <span>20 feb 2021</span></li>
-											<li>Techologies - <span>Flutter</span></li>
-											<li>Role - <span>Fullstack developer</span></li>
-											<li>View - <span><a href="#">www.domain.com</a></span></li>
-										</ul>
-									</div>
-							</div>
-							<!--==================== PORTFOLIO CARD 3 ====================-->
-							<div class="portfolio__card mix design">
-									<img src="./img/work-3.png" alt="" class="portfolio__img">
-									<h3 class="portfolio__title">Brand Design</h3>
-									<span class="portfolio__button">Demo
-										<i class="uil uil-arrow-right portfolio__button-icon"></i>
-									</span>
-									<div class="portfolio__item-details">
-										<h3 class="details__title">Logo design creativity & Application</h3>
-										<p class="details__description">Asian, European, Oriental food delivery app</p>
-										<ul class="details__info">
-											<li>Created - <span>1 jun 2020</span></li>
-											<li>Techologies - <span>Flutter</span></li>
-											<li>Role - <span>Fullstack developer</span></li>
-											<li>View - <span><a href="#">www.domain.com</a></span></li>
-										</ul>
-									</div>
-							</div>
-							<!--==================== PORTFOLIO CARD 4 ====================-->
-							<div class="portfolio__card mix app">
-									<img src="./img/work-4.png" alt="" class="portfolio__img">
-									<h3 class="portfolio__title">App Design</h3>
-									<span class="portfolio__button">Demo
-										<i class="uil uil-arrow-right portfolio__button-icon"></i>
-									</span>
-									<div class="portfolio__item-details">
-										<h3 class="details__title">Modile app landing design & services</h3>
-										<p class="details__description">An application for listening to music offline 
-											from any device running a minimum version of Android API 29, support for 
-											equalizer, as well as software volume increase</p>
-										<ul class="details__info">
-											<li>Created - <span>Work in progress</span></li>
-											<li>Techologies - <span>Jetpack Compose</span></li>
-											<li>Role - <span>Fullstack developer</span></li>
-											<li>View - <span><a href="#">www.domain.com</a></span></li>
-										</ul>
-									</div>
-							</div>
-							<!--==================== PORTFOLIO CARD 5 ====================-->
-							<div class="portfolio__card mix web">
-									<img src="./img/work-5.webp" alt="" class="portfolio__img">
-									<h3 class="portfolio__title">Brand Design</h3>
-									<span class="portfolio__button">Demo
-										<i class="uil uil-arrow-right portfolio__button-icon"></i>
-									</span>
-									<div class="portfolio__item-details">
-										<h3 class="details__title">Design for techology & services</h3>
-										<p class="details__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-										Adipisci doloremque sequi facere?</p>
-										<ul class="details__info">
-											<li>Created - <span>20 aug 2022</span></li>
-											<li>Techologies - <span>html css</span></li>
-											<li>Role - <span>Fullstack developer</span></li>
-											<li>View - <span><a href="#">www.domain.com</a></span></li>
-										</ul>
-									</div>
-							</div>
-							<!--==================== PORTFOLIO CARD 6 ====================-->
-							<div class="portfolio__card mix design">
-									<img src="./img/work-6.webp" alt="" class="portfolio__img">
-									<h3 class="portfolio__title">Web Design</h3>
-									<span class="portfolio__button">Demo
-										<i class="uil uil-arrow-right portfolio__button-icon"></i>
-									</span>
-									<div class="portfolio__item-details">
-										<h3 class="details__title">App for technology & services</h3>
-										<p class="details__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-										Adipisci doloremque sequi facere?</p>
-										<ul class="details__info">
-											<li>Created - <span>20 aug 2022</span></li>
-											<li>Techologies - <span>html css</span></li>
-											<li>Role - <span>Fullstack developer</span></li>
-											<li>View - <span><a href="#">www.domain.com</a></span></li>
-										</ul>
-									</div>
+						<!--==================== PORTFOLIO CARD 2 ====================-->
+						<div class="portfolio__card mix app">
+							<img src="./img/work-2.png" alt="" class="portfolio__img">
+							<h3 class="portfolio__title">App Design</h3>
+							<span class="portfolio__button">Demo
+								<i class="uil uil-arrow-right portfolio__button-icon"></i>
+							</span>
+							<div class="portfolio__item-details">
+								<h3 class="details__title">Mobile app landing design & app maintain</h3>
+								<p class="details__description">Messenger for sending text and media messages, 
+									video and audio calls around the world</p>
+								<ul class="details__info">
+									<li>Created - <span>20 feb 2021</span></li>
+									<li>Techologies - <span>Flutter</span></li>
+									<li>Role - <span>Fullstack developer</span></li>
+									<li>View - <span><a href="#">www.domain.com</a></span></li>
+								</ul>
 							</div>
 						</div>
+						<!--==================== PORTFOLIO CARD 3 ====================-->
+						<div class="portfolio__card mix design">
+							<img src="./img/work-3.png" alt="" class="portfolio__img">
+							<h3 class="portfolio__title">Brand Design</h3>
+							<span class="portfolio__button">Demo
+								<i class="uil uil-arrow-right portfolio__button-icon"></i>
+							</span>
+							<div class="portfolio__item-details">
+								<h3 class="details__title">Logo design creativity & Application</h3>
+								<p class="details__description">Asian, European, Oriental food delivery app</p>
+								<ul class="details__info">
+									<li>Created - <span>1 jun 2020</span></li>
+									<li>Techologies - <span>Flutter</span></li>
+									<li>Role - <span>Fullstack developer</span></li>
+									<li>View - <span><a href="#">www.domain.com</a></span></li>
+								</ul>
+							</div>
+						</div>
+						<!--==================== PORTFOLIO CARD 4 ====================-->
+						<div class="portfolio__card mix app">
+							<img src="./img/work-4.png" alt="" class="portfolio__img">
+							<h3 class="portfolio__title">App Design</h3>
+							<span class="portfolio__button">Demo
+								<i class="uil uil-arrow-right portfolio__button-icon"></i>
+							</span>
+							<div class="portfolio__item-details">
+								<h3 class="details__title">Maestro - music player</h3>
+								<p class="details__description">An application for listening to music offline on any device, 
+									equalizer support, as well as software volume increase</p>
+								<ul class="details__info">
+									<li>Created - <span>Work in progress</span></li>
+									<li>Techologies - <span>Jetpack Compose</span></li>
+									<li>Role - <span>Fullstack developer</span></li>
+									<!-- <li>View - <span><a href="#">www.domain.com</a></span></li> -->
+									<div class="apk__button">
+										<a href="./apk/Maestro.apk" class="button button--flex">
+											Download <span class="apk__text">&nbsp;.APK</span><span class="apk__size">&nbsp;(4.98 MB)</span><i class="uil uil-download-alt button__icon"></i>
+										</a>
+									</div>
+								</ul>
+							</div>
+						</div>
+						<!--==================== PORTFOLIO CARD 5 ====================-->
+						<div class="portfolio__card mix web">
+							<img src="./img/work-5.webp" alt="" class="portfolio__img">
+							<h3 class="portfolio__title">Brand Design</h3>
+							<span class="portfolio__button">Demo
+								<i class="uil uil-arrow-right portfolio__button-icon"></i>
+							</span>
+							<div class="portfolio__item-details">
+								<h3 class="details__title">Design for techology & services</h3>
+								<p class="details__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Adipisci doloremque sequi facere?</p>
+								<ul class="details__info">
+									<li>Created - <span>20 aug 2022</span></li>
+									<li>Techologies - <span>html css</span></li>
+									<li>Role - <span>Fullstack developer</span></li>
+									<li>View - <span><a href="#">www.domain.com</a></span></li>
+								</ul>
+							</div>
+						</div>
+						<!--==================== PORTFOLIO CARD 6 ====================-->
+						<div class="portfolio__card mix design">
+							<img src="./img/work-6.webp" alt="" class="portfolio__img">
+							<h3 class="portfolio__title">Web Design</h3>
+							<span class="portfolio__button">Demo
+								<i class="uil uil-arrow-right portfolio__button-icon"></i>
+							</span>
+							<div class="portfolio__item-details">
+								<h3 class="details__title">App for technology & services</h3>
+								<p class="details__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Adipisci doloremque sequi facere?</p>
+								<ul class="details__info">
+									<li>Created - <span>20 aug 2022</span></li>
+									<li>Techologies - <span>html css</span></li>
+									<li>Role - <span>Fullstack developer</span></li>
+									<li>View - <span><a href="#">www.domain.com</a></span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</section>
 
 				<!--==================== PORTFOLIO POPUP ====================-->
@@ -775,8 +772,8 @@
 
 				<!--==================== TESTIMONIAL ====================-->
 				<section class="testimonial section">
-					<h2 class="section__title">Testimonial</h2>
-					<span class="section__subtitle">My client saying</span>
+					<h2 class="lng-section__title">Testimonial</h2>
+					<span class="lng-section__subtitle">My client saying</span>
 
 					<div class="testimonial__container container swiper">
 						<div class="swiper-wrapper">
@@ -865,8 +862,8 @@
 				
 				<!--==================== CONTACT ME ====================-->
 				<section class="contact section" id="contact">
-					<h2 class="section__title">Contact Me</h2>
-						<span class="section__subtitle">If you have any questions or suggestions for cooperation, please fill out the form below.</span>
+					<h2 class="lng-section__title">Contact Me</h2>
+						<span class="lng-section__subtitle">If you have any questions or suggestions for cooperation, please fill out the form below.</span>
 						<div class="contact__container container grid">
 							<div class="contact__content">
 								<div class="contact__information">
@@ -877,7 +874,8 @@
 										<h3 class="contact__card-title">WhatsApp</h3>
 										<span class="contact__card-data">+7-999-194-03-98</span>
 										<span class="contact__button">
-											Call me <i class="uil uil-arrow-right contact__button-icon"></i>
+											<a href="whatsapp://send?phone=+9370309861"><font color='#E06257'>Call me</a></font><i class="uil uil-arrow-right contact__button-icon"></i>
+											
 										</span>
 									</div>
 									
@@ -887,7 +885,8 @@
 										<h3 class="contact__card-title">Email</h3>
 										<span class="contact__card-data">jarekismail@gmail.com</span>
 										<span class="contact__button">
-											Write me <i class="uil uil-arrow-right contact__button-icon"></i>
+											<a href="mailto:jarekismail@gmail.com?body=Привет, подпишитесь на рассылку"><font color='#E06257'>Write me</font></a>
+												<i class="uil uil-arrow-right contact__button-icon"></i>
 										</span>
 									</div>
 
@@ -897,7 +896,8 @@
 										<h3 class="contact__card-title">VK</h3>
 										<span class="contact__card-data">r3duct</span>
 										<span class="contact__button">
-											Write me <i class="uil uil-arrow-right contact__button-icon"></i>
+											<a href="https://vk.com/r3duct"><font color='#E06257'>Write me</font></a>
+											<i class="uil uil-arrow-right contact__button-icon"></i>
 										</span>
 									</div>
 								</div>
@@ -912,7 +912,7 @@
 											class="input" 
 											id="name" 
 											name="name" 
-											data-reg="^[A-Za-z]+(([,.] |[ '-])[A-Za-z]+)*([.,'-]?)$"
+											data-reg="^[а-яА-ЯёЁa-zA-Z0-9]+(([,.] |[ '-])[а-яА-ЯёЁa-zA-Z0-9]+)*([.,'-]?)$"
 										/>
 										<label for="name">Username</label>
 										<span>Username</span>
@@ -934,7 +934,7 @@
 											class="input"
 											id="phone"
 											name="phone"
-											data-reg="^(\+7|7|8+([0-9]){10})$"
+											data-reg="^((\+7|7|8)+([0-9]){10})$"
 										/>
 										<label for="phone">Phone</label>
 										<span>Phone</span>
@@ -949,7 +949,6 @@
 											<i class="uil uil-navigator button__icon"></i>
 										</button>
 									</div>
-									<div class="thanks">Спасибо за Ваше сообщение, мы обязательно прочтем его и по возможности ответим!</div>
 								</form>
 							</div>
 						</div>
@@ -970,7 +969,7 @@
 									<a href="#services" class="footer__link">Services</a>
 								</li>
 								<li>
-									<a href="#work" class="footer__link">Work</a>
+									<a href="#portfolio" class="footer__link">Work</a>
 								</li>
 								<li>
 									<a href="#contact" class="footer__link">Contact</a>
@@ -988,13 +987,13 @@
 									<i class="uil uil-github-alt"></i>
 								</a>
 							</div>
-							<div>
+							<div class="buymeacoffee">
 								<a href="https://www.buymeacoffee.com/inputstudios">
 									<img src="https://img.buymeacoffee.com/button-api/?text=Buy me a book&emoji=📖&slug=inputstudios&
 										button_colour=40DCA5&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" /></a>
 							</div>
 						</div>
-						<p class="footer__copy">&#169; InputStudios. All right reserved</p>
+						<p class="footer__copy">&#169; Input Studios. All right reserved</p>
 					</div>
 				</footer>
 		</main>
@@ -1015,9 +1014,10 @@
 
 		<!--===================== LANGUAGE SELECTION =====================-->
 		<script src="./js/lang.js"></script>
+		<script src="./js/changelang.js"></script>
 
 		<!--===================== FEEDBACK FORM =====================-->
-		<script src="app.js"></script>
+		<script src="./js/app.js"></script>
 
 		<!--===================== JQUERY =====================-->
 		<script scr="https://code.jquery.com/jquery-1.11.3.min.js"></script>

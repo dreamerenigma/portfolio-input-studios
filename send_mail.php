@@ -11,6 +11,8 @@
    $mail->CharSet = "UTF-8";
    $mail->IsHTML(true);
 
+   $mail->AddEmbeddedImage('img/logo.png', 'logo_2u');
+
    $name = $_POST["name"];
    $email = $_POST["email"];
    $phone = $_POST["phone"];
@@ -26,7 +28,7 @@
    $body = str_replace('%message%', $message, $body);
 
    $mail->addAddress("jarekismail@gmail.com");
-   $mail->setFrom($email);
+   $mail->setFrom("feedback@inputstudios.ru", "Feedback Input Studios");
 
    $mail->Subject = "[Заявка с формы]";
    $mail->MsgHTML($body);
