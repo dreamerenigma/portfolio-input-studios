@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-	<html lang="en">
+	<html lang="ru">
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!--===================== ICON =====================-->
-		<link rel="icon" href="./img/favicon.ico" type="image/ico">
+		<link rel="icon" href="./img/favicon.ico" type="image/x-icon">
 		<!--===================== UNICONS =====================-->
 		<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 		<!--===================== SWIPER CSS =====================-->
@@ -25,32 +25,38 @@
 					<ul class="nav__list grid">
 						<li class="nav__item">
 							<a href="#home" class="nav__link active-link">
-								<i class="uil uil-estate nav__icon"></i> Home
+								<i class="uil uil-estate nav__icon"></i>
+								<span class="lng-nav__home">Home</span>
 							</a>
 						</li>
-						<li class="lng-nav__item">
+						<li class="nav__item">
 							<a href="#about" class="nav__link">
-								<i class="uil uil-user nav__icon"></i> About
+								<i class="uil uil-user nav__icon"></i>
+								<span class="lng-nav__about">About</span>
 							</a>
 						</li>
-						<li class="lng-nav__item">
+						<li class="nav__item">
 							<a href="#skills" class="nav__link">
-								<i class="uil uil-file-alt nav__icon"></i> Skills
+								<i class="uil uil-file-alt nav__icon"></i>
+								<span class="lng-nav__skills">Skills</span>
 							</a>
 						</li>
-						<li class="lng-nav__item">
+						<li class="nav__item">
 							<a href="#services" class="nav__link">
-								<i class="uil uil-briefcase-alt nav__icon"></i> Services
+								<i class="uil uil-briefcase-alt nav__icon"></i>
+								<span class="lng-nav__services">Services</span>
 							</a>
 						</li>
-						<li class="lng-nav__item">
+						<li class="nav__item">
 							<a href="#portfolio" class="nav__link"> 
-								<i class="uil uil-scenery nav__icon"></i> Portfolio
+								<i class="uil uil-scenery nav__icon"></i>
+								<span class="lng-nav__portfolio">Portfolio</span>
 							</a>
 						</li>
 						<li class="lng-nav__item">
 							<a href="#contact" class="nav__link">
-								<i class="uil uil-message nav__icon"></i> Contactme
+								<i class="uil uil-message nav__icon"></i>
+								<span class="lng-nav__contactme">Contactme</span>
 							</a>
 						</li>
 					</select>
@@ -58,12 +64,12 @@
 					<i class="uil uil-times nav__close" id="nav-close"></i>
 				</div>
 				
-					<!-- Language Selection -->
-					<select class="change-lang">
-						<option value="ru" selected>RU</option>
-						<option value="en">EN</option>
-						<option value="es">ES</option>
-					</select>
+				<!-- Language Selection -->
+				<select class="change-lang">
+					<option value="ru" selected>RU</option>
+					<option value="en">EN</option>
+					<option value="es">ES</option>
+				</select>
 
 				<div class="nav__btns">
 					<!-- Theme change button -->
@@ -118,8 +124,8 @@
 
 				<!--==================== ABOUT ====================-->
 				<section class="about section" id="about">
-						<h2 class="lng-section__title">About Me</h2>
-						<span class="lng-section__subtitle">My introduction</span>
+						<h2 class="lng-section__about">About Me</h2>
+						<p class="lng-section__introduction">My introduction</p>
 						<div class="about__container container grid">
 							<img src="./img/about.png" alt="" class="about__img">
 							<div class="about__data">
@@ -141,7 +147,7 @@
 								</div>
 								<div class="about__buttons">
 									<a href="./pdf/Andrey-Cv.pdf" class="button button--flex">
-										Download CV<i class="uil uil-download-alt button__icon"></i>
+										<span class="lng-download__cv">Download CV</span><i class="uil uil-download-alt button__icon"></i>
 									</a>
 								</div>
 							</div>
@@ -150,8 +156,8 @@
 
 				<!--==================== SKILLS ====================-->
 				<section class="skills section" id="skills">
-						<h2 class="lng-section__title">Skills</h2>
-						<span class="lng-section__subtitle">My techical level</span>
+						<h2 class="lng-section__skills">Skills</h2>
+						<p class="lng-section__level">My techical level</p>
 
 						<div class="skills__container container grid">
 							<div>
@@ -161,8 +167,8 @@
 										<i class="uil uil-brackets-curly skills__icon"></i>
 
 										<div>
-											<h1 class="skills__title">Frontend developer</h1>
-											<span class="skills__subtitle">More than 4 years</span>
+											<h1 class="lng-skills__frontend">Frontend developer</h1>
+											<span class="lng-skills__more__front">More than 4 years</span>
 										</div>
 
 										<i class="uil uil-angle-down skills__arrow"></i>
@@ -217,8 +223,8 @@
 										<i class="uil uil-server-network skills__icon"></i>
 
 										<div>
-											<h1 class="skills__title">Backend developer</h1>
-											<span class="skills__subtitle">More than 2 years</span>
+											<h1 class="lng-skills__backend">Backend developer</h1>
+											<span class="lng-skills__more__back">More than 2 years</span>
 										</div>
 
 										<i class="uil uil-angle-down skills__arrow"></i>
@@ -275,8 +281,8 @@
 										<i class="uil uil-swatchbook skills__icon"></i>
 										
 										<div>
-											<h1 class="skills__title">Designer</h1>
-											<span class="skills__subtitle">More than 5 years</span>
+											<h1 class="lng-skills__designer">Designer</h1>
+											<span class="lng-skills__more__design">More than 5 years</span>
 										</div>
 
 										<i class="uil uil-angle-down skills__arrow"></i>
@@ -320,19 +326,19 @@
 
 				<!--==================== QUALIFICATION ====================-->
 				<section class="qualification section">
-					<h2 class="lng-section__title">Qualification</h2>
-					<span class="lng-section__subtitle">My personal journey</span>
+					<h2 class="lng-section__qualification">Qualification</h2>
+					<p class="lng-section__journey">My personal journey</p>
 
 					<div class="qualification__container container">
 						<div class="qualification__tabs">
 							<div class="qualification__button button--flex qualification__active" data-target="#education">
 								<i class="uil uil-graduation-cap qualification__icon"></i>
-								Education
+								<p class="lng-education">Education</p>
 							</div>
 
 							<div class="qualification__button button--flex" data-target="#work">
 								<i class="uil uil-briefcase-alt qualification__icon"></i>
-								Work
+								<p class="lng-work">Work</p>
 							</div>
 						</div>
 
@@ -342,8 +348,8 @@
 								<!--==================== QUALIFICATION 1 ====================-->
 								<div class="qualification__data">
 										<div>
-											<h3 class="qualification__title">Computer Enginner</h3>
-											<span class="qualification__subtitle">Ulyanovsk - Colledge</span>
+											<h3 class="lng-qualification__computer">Computer Enginner</h3>
+											<span class="lng-qualification__colledge">Techical Colledge - Ulyanovsk</span>
 											<div class="qualification__calendar">
 												<i class="uil uil-calendar-alt"></i>
 												2006 - 2010
@@ -366,8 +372,8 @@
 									</div>
 
 									<div>
-										<h3 class="qualification__title">Web Design</h3>
-										<span class="qualification__subtitle">Moscow - Skillbox</span>
+										<h3 class="lng-qualification__design">Web Design</h3>
+										<span class="lng-qualification__skillbox">Skillbox - Moscow</span>
 										<div class="qualification__calendar">
 											<i class="uil uil-calendar-alt"></i>
 											2017 - 2019
@@ -378,8 +384,8 @@
 								<!--==================== QUALIFICATION 3 ====================-->
 								<div class="qualification__data">
 									<div>
-										<h3 class="qualification__title">Web Development</h3>
-										<span class="qualification__subtitle">Ulyanovsk - Insitute</span>
+										<h3 class="lng-qualification__development">Web Development</h3>
+										<span class="lng-qualification__insitute">Techical Insitute - Ulyanovsk</span>
 										<div class="qualification__calendar">
 											<i class="uil uil-calendar-alt"></i>
 											2020 - 2025
@@ -402,8 +408,8 @@
 									</div>
 
 									<div>
-										<h3 class="qualification__title">Master in UI/UX</h3>
-										<span class="qualification__subtitle">Ulyanovsk - Netology</span>
+										<h3 class="lng-qualification__master">Master in UI/UX</h3>
+										<span class="lng-qualification__netology">Netology - Ulyanovsk</span>
 										<div class="qualification__calendar">
 											<i class="uil uil-calendar-alt"></i>
 											2020 - 2022
@@ -417,8 +423,8 @@
 								<!--==================== QUALIFICATION 1 ====================-->
 								<div class="qualification__data">
 									<div>
-										<h3 class="qualification__title">Software Enginner</h3>
-										<span class="qualification__subtitle">SimbirskMplus - Ulyanovsk</span>
+										<h3 class="lng-qualification__software">Software Enginner</h3>
+										<span class="lng-qualification__simm">SimbirskMplus - Ulyanovsk</span>
 										<div class="qualification__calendar">
 											<i class="uil uil-calendar-alt"></i>
 											2016 - 2018
@@ -440,8 +446,8 @@
 									</div>
 
 									<div>
-										<h3 class="qualification__title">Frontend Developer</h3>
-										<span class="qualification__subtitle">Input Studios - Ulyanovsk</span>
+										<h3 class="lng-qualification__front">Frontend Developer</h3>
+										<span class="lng-qualification__inputstudios">Input Studios - Ulyanovsk</span>
 										<div class="qualification__calendar">
 											<i class="uil uil-calendar-alt"></i>
 											2020 - 2022
@@ -451,8 +457,8 @@
 								<!--==================== QUALIFICATION 3 ====================-->
 								<div class="qualification__data">
 									<div>
-										<h3 class="qualification__title">UI Designer</h3>
-										<span class="qualification__subtitle">Figma - Russia</span>
+										<h3 class="lng-qualification__designer">UI Designer</h3>
+										<span class="lng-qualification__figma">Figma - Russia</span>
 										<div class="qualification__calendar">
 											<i class="uil uil-calendar-alt"></i>
 											2018 - 2020
@@ -471,43 +477,43 @@
 
 				<!--==================== SERVICES ====================-->
 				<section class="services section" id="services">
-						<h2 class="lng-section__title">Services</h2>
-						<span class="lng-section__subtitle">What i offer</span>
+						<h2 class="lng-section__services">Services</h2>
+						<p class="lng-section__offer">What i offer</p>
 
 						<div class="services__container container grid">
 							<!--==================== SERVICES 1 ====================-->
 							<div class="services__content">
 								<div>
 									<i class="uil uil-web-grid services__icon"></i>
-									<h3 class="services__title">UI/UX <br> Designer</h3>
+									<h3 class="lng-services__designer">UI/UX Designer</h3>
 								</div>
 
 								<span class="button button--flex button--small button--link services__button">
-									View More
+									<p class="lng-view__more__designer">View More</p>
 									<i class="uil uil-arrow-right button__icon"></i>
 								</span>
 
 								<div class="services__modal">
 									<div class="services__modal-content">
-										<h4 class="services__modal-title">UI/UX <br> Designer</h4>
+										<h4 class="lng-services__modal-designer">UI/UX Designer</h4>
 										<i class="uil uil-times services__modal-close"></i>
 
 										<ul class="services__modal-services grid">
 											<li class="services__modal-service">
 												<i class="uil uil-check-circle services__modal-icon"></i>
-												<p>I develop the user interface.</p>
+												<p class="lng-service__interface">I develop the user interface.</p>
 											</li>
 											<li class="services__modal-service">
 												<i class="uil uil-check-circle services__modal-icon"></i>
-												<p>Web page development.</p>
+												<p class="lng-service__develop">Web page development.</p>
 											</li>
 											<li class="services__modal-service">
 												<i class="uil uil-check-circle services__modal-icon"></i>
-												<p>I create ux element interactions.</p>
+												<p class="lng-service__interactions">I create ux element interactions.</p>
 											</li>
 											<li class="services__modal-service">
 												<i class="uil uil-check-circle services__modal-icon"></i>
-												<p>I position your company brand.</p>
+												<p class="lng-service__brand">I position your company brand.</p>
 											</li>
 										</ul>
 									</div>
@@ -517,35 +523,35 @@
 							<div class="services__content">
 								<div>
 									<i class="uil uil-arrow services__icon"></i>
-									<h3 class="services__title">Frontend <br> Developer</h3>
+									<h3 class="lng-services__front">Frontend Developer</h3>
 								</div>
 
 								<span class="button button--flex button--small button--link services__button">
-									View More
+									<p class="lng-view__more__front">View More</p>
 									<i class="uil uil-arrow-right button__icon"></i>
 								</span>
 
 								<div class="services__modal">
 									<div class="services__modal-content">
-										<h4 class="services__modal-title">Frontend <br> Developer</h4>
+										<h4 class="lng-services__modal-front">Frontend Developer</h4>
 										<i class="uil uil-times services__modal-close"></i>
 
 										<ul class="services__modal-services grid">
 											<li class="services__modal-service">
 												<i class="uil uil-check-circle services__modal-icon"></i>
-												<p>I develop the user interface.</p>
+												<p class="lng-service__adaptability">Adaptability and mobile design.</p>
 											</li>
 											<li class="services__modal-service">
 												<i class="uil uil-check-circle services__modal-icon"></i>
-												<p>Web page development.</p>
+												<p class="lng-service__builder">Project Builder.</p>
 											</li>
 											<li class="services__modal-service">
 												<i class="uil uil-check-circle services__modal-icon"></i>
-												<p>I create ux element interactions.</p>
+												<p class="lng-service__crossbrowser">Crossbrowser compatibility.</p>
 											</li>
 											<li class="services__modal-service">
 												<i class="uil uil-check-circle services__modal-icon"></i>
-												<p>I position your company brand.</p>
+												<p class="lng-service__testing">Testing and Debugging.</p>
 											</li>
 										</ul>
 									</div>
@@ -555,35 +561,35 @@
 							<div class="services__content">
 								<div>
 									<i class="uil uil-pen services__icon"></i>
-									<h3 class="services__title">Branding <br> Designer</h3>
+									<h3 class="lng-services__brand">Branding Designer</h3>
 								</div>
 
 								<span class="button button--flex button--small button--link services__button">
-									View More
+									<p class="lng-view__more__brand">View More</p>
 									<i class="uil uil-arrow-right button__icon"></i>
 								</span>
 
 								<div class="services__modal">
 									<div class="services__modal-content">
-										<h4 class="services__modal-title">Branding <br> Designer</h4>
+										<h4 class="lng-services__modal-brand">Branding &shy; Designer</h4>
 										<i class="uil uil-times services__modal-close"></i>
 
 										<ul class="services__modal-services grid">
 											<li class="services__modal-service">
 												<i class="uil uil-check-circle services__modal-icon"></i>
-												<p>I develop the user interface.</p>
+												<p class="lng-service__logo">Logo design</p>
 											</li>
 											<li class="services__modal-service">
 												<i class="uil uil-check-circle services__modal-icon"></i>
-												<p>Web page development.</p>
+												<p class="lng-service__identity">Identity development</p>
 											</li>
 											<li class="services__modal-service">
 												<i class="uil uil-check-circle services__modal-icon"></i>
-												<p>I create ux element interactions.</p>
+												<p class="lng-service__guideline">Guideline development</p>
 											</li>
 											<li class="services__modal-service">
 												<i class="uil uil-check-circle services__modal-icon"></i>
-												<p>I position your company brand.</p>
+												<p class="lng-service__analysis">Analysis of the work performed</p>
 											</li>
 										</ul>
 									</div>
@@ -594,30 +600,30 @@
 				
 				<!--==================== PORTFOLIO ====================-->
 				<section class="portfolio section" id="portfolio">
-					<h2 class="lng-section__title">My Portfolio</h2>
-					<span class="lng-section__subtitle">Most recent work</span>
+					<h2 class="lng-section__portfolio">My Portfolio</h2>
+					<p class="lng-section__recent-work">Most recent works</p>
 
 					<div class="portfolio__filters">
-						<span class="portfolio__item active-portfolio" data-filter="all">All</span>
-						<span class="portfolio__item" data-filter=".web">Web</span>
-						<span class="portfolio__item" data-filter=".app">App</span>
-						<span class="portfolio__item" data-filter=".design">Design</span>
+						<p class="lng-portfolio__all active-portfolio" data-filter="all">All</p>
+						<p class="lng-portfolio__web" data-filter=".web">Web</p>
+						<p class="lng-portfolio__app" data-filter=".app">App</p>
+						<p class="lng-portfolio__design" data-filter=".design">Design</p>
 					</div>
 
 					<div class="portfolio__container container grid">
 						<!--==================== PORTFOLIO CARD 1 ====================-->
 						<div class="portfolio__card mix web">
 								<img src="./img/work-1.png" alt="" class="portfolio__img">
-								<h3 class="portfolio__title">Web Design</h3>
+								<h3 class="lng-portfolio__web-card">Web Design</h3>
 								<span class="portfolio__button">Demo
 									<i class="uil uil-arrow-right portfolio__button-icon"></i>
 								</span>
 								<div class="portfolio__item-details">
-									<h3 class="details__title">The service provide for design</h3>
-									<p class="details__description">Online cinema with a built-in modern player with support 
+									<h3 class="lng-details__provide">The service provides online cinema design</h3>
+									<p class="lng-details__description-web">Online cinema with a built-in modern player with support 
 										for adjusting the speed of video playback</p>
 									<ul class="details__info">
-										<li>Created - <span>10 mar 2019</span></li>
+										<li><span class="lng-cinema__created">Created</span> - <span>10 mar 2019</span></li>
 										<li>Techologies - <span>HTML CSS JS</span></li>
 										<li>Role - <span>Fullstack developer</span></li>
 										<li>View - <span><a href="#">www.domain.com</a></span></li>
@@ -627,13 +633,13 @@
 						<!--==================== PORTFOLIO CARD 2 ====================-->
 						<div class="portfolio__card mix app">
 							<img src="./img/work-2.png" alt="" class="portfolio__img">
-							<h3 class="portfolio__title">App Design</h3>
+							<h3 class="lng-portfolio__app-card">App Design</h3>
 							<span class="portfolio__button">Demo
 								<i class="uil uil-arrow-right portfolio__button-icon"></i>
 							</span>
 							<div class="portfolio__item-details">
-								<h3 class="details__title">Mobile app landing design & app maintain</h3>
-								<p class="details__description">Messenger for sending text and media messages, 
+								<h3 class="lng-details__title">Mobile app landing design & app maintain</h3>
+								<p class="lng-details__description-card-2">Messenger for sending text and media messages, 
 									video and audio calls around the world</p>
 								<ul class="details__info">
 									<li>Created - <span>20 feb 2021</span></li>
@@ -651,8 +657,8 @@
 								<i class="uil uil-arrow-right portfolio__button-icon"></i>
 							</span>
 							<div class="portfolio__item-details">
-								<h3 class="details__title">Logo design creativity & Application</h3>
-								<p class="details__description">Asian, European, Oriental food delivery app</p>
+								<h3 class="lng-details__title">Logo design creativity & Application</h3>
+								<p class="lng-details__description">Asian, European, Oriental food delivery app</p>
 								<ul class="details__info">
 									<li>Created - <span>1 jun 2020</span></li>
 									<li>Techologies - <span>Flutter</span></li>
@@ -661,6 +667,32 @@
 								</ul>
 							</div>
 						</div>
+
+						<div class="portfolio__popup">
+							<div class="portfolio__popup-inner">
+								<div class="portfolio__popup-content grid">
+									<span class="portfolio__popup-close"><i class="uil uil-times"></i></span>
+									<div class="pp__thumbnail">
+										<img src="./img/work-2.png" alt="" class="portfolio__popup-img">
+									</div>
+									<div class="portfolio__popup-info">
+										<div class="portfolio__popup-subtitle">Featured - <span>Design</span></div>
+										<div class="portfolio__popup-body">
+											<h3 class="details__title">App for technology & services</h3>
+											<p class="details__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+											Adipisci doloremque sequi facere?</p>
+											<ul class="details__info">
+												<li>Created - <span>20 aug 2022</span></li>
+												<li>Techologies - <span>html css</span></li>
+												<li>Role - <span>Fullstack developer</span></li>
+												<li>View - <span><a href="#">www.domain.com</a></span></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
 						<!--==================== PORTFOLIO CARD 4 ====================-->
 						<div class="portfolio__card mix app">
 							<img src="./img/work-4.png" alt="" class="portfolio__img">
@@ -686,7 +718,7 @@
 							</div>
 						</div>
 						<!--==================== PORTFOLIO CARD 5 ====================-->
-						<div class="portfolio__card mix web">
+						<!-- <div class="portfolio__card mix web">
 							<img src="./img/work-5.webp" alt="" class="portfolio__img">
 							<h3 class="portfolio__title">Brand Design</h3>
 							<span class="portfolio__button">Demo
@@ -703,9 +735,9 @@
 									<li>View - <span><a href="#">www.domain.com</a></span></li>
 								</ul>
 							</div>
-						</div>
+						</div> -->
 						<!--==================== PORTFOLIO CARD 6 ====================-->
-						<div class="portfolio__card mix design">
+						<!-- <div class="portfolio__card mix design">
 							<img src="./img/work-6.webp" alt="" class="portfolio__img">
 							<h3 class="portfolio__title">Web Design</h3>
 							<span class="portfolio__button">Demo
@@ -722,7 +754,7 @@
 									<li>View - <span><a href="#">www.domain.com</a></span></li>
 								</ul>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</section>
 
@@ -757,23 +789,22 @@
 					<div class="project__bg">
 						<div class="project__container container grid">
 							<div class="project__data">
-								<h2 class="project__title">You have a new project</h2>
-								<p class="project__description">Contact me now and get a 30% discount on your new project.</p>
+								<h2 class="lng-project__title">You have a new project</h2>
+								<p class="lng-project__description">Contact me now and get a 30% discount on your new project.</p>
 								<a href="#contact" class="button button--flex button--white">
-									Contact Me
+									<p class="lng-project__contactme">Contact Me</p>
 									<i class="uil uil-message project__icon button__icon"></i>
 								</a>
 							</div>
-
-							<img src="./img/project.png" alt="" class="project__img">
+							<img src="./img/project.png" alt="My Photo" class="project__img">
 						</div>
 					</div>
 				</section>
 
 				<!--==================== TESTIMONIAL ====================-->
 				<section class="testimonial section">
-					<h2 class="lng-section__title">Testimonial</h2>
-					<span class="lng-section__subtitle">My client saying</span>
+					<h2 class="lng-section__testimonials">Testimonials</h2>
+					<p class="lng-section__saying">My client saying</p>
 
 					<div class="testimonial__container container swiper">
 						<div class="swiper-wrapper">
@@ -782,13 +813,11 @@
 								<div class="testimonial__data">
 									<div class="testimonial__header">
 										<img src="./img/testimonial1.png" alt="" class="testimonial__img">
-
 										<div>
-											<h3 class="testimonial__name">Sofia Morozova</h3>
-											<span class="testimonial__client">Client</span>
+											<h3 class="lng-testimonial__name-one">Sofia Morozova</h3>
+											<p class="lng-testimonial__client-one">Client</p>
 										</div>
 									</div>
-
 									<div>
 										<i class="uil uil-star testimonial__icon-star"></i>
 										<i class="uil uil-star testimonial__icon-star"></i>
@@ -797,8 +826,7 @@
 										<i class="uil uil-star testimonial__icon-star"></i>
 									</div>
 								</div>
-
-								<p class="testimonial__description">It was necessary to make a website design 
+								<p class="lng-testimonial__description-one">It was necessary to make a website design 
 									Andrey Trepalin helped me in this within 24 hours the problem was solved.
 								</p>
 							</div>
@@ -807,10 +835,9 @@
 								<div class="testimonial__data">
 									<div class="testimonial__header">
 										<img src="./img/testimonial2.png" alt="" class="testimonial__img">
-
 										<div>
-											<h3 class="testimonial__name">Maria Sidorova</h3>
-											<span class="testimonial__client">Client</span>
+											<h3 class="lng-testimonial__name-two">Maria Sidorova</h3>
+											<p class="lng-testimonial__client-two">Client</p>
 										</div>
 									</div>
 
@@ -823,7 +850,7 @@
 									</div>
 								</div>
 
-								<p class="testimonial__description">I express my gratitude to the company 
+								<p class="lng-testimonial__description-two">I express my gratitude to the company 
 									Input Studios for the work done with my portfolio site.
 								</p>
 							</div>
@@ -832,13 +859,11 @@
 								<div class="testimonial__data">
 									<div class="testimonial__header">
 										<img src="./img/testimonial3.png" alt="" class="testimonial__img">
-
 									<div>
-										<h3 class="testimonial__name">Egor Danilov</h3>
-										<span class="testimonial__client">Client</span>
+										<h3 class="lng-testimonial__name-three">Egor Danilov</h3>
+										<span class="lng-testimonial__client-three">Client</span>
 									</div>
 								</div>
-
 									<div>
 										<i class="uil uil-star testimonial__icon-star"></i>
 										<i class="uil uil-star testimonial__icon-star"></i>
@@ -847,8 +872,7 @@
 										<i class="uil uil-star testimonial__icon-star"></i>
 									</div>
 								</div>
-
-								<p class="testimonial__description">The customer asked me to make 
+								<p class="lng-testimonial__description-three">The customer asked me to make 
 									new effects for the site, he turned to Input Studios, 
 									Andrey helped me, thanks to him for his help.
 								</p>
@@ -862,8 +886,8 @@
 				
 				<!--==================== CONTACT ME ====================-->
 				<section class="contact section" id="contact">
-					<h2 class="lng-section__title">Contact Me</h2>
-						<span class="lng-section__subtitle">If you have any questions or suggestions for cooperation, please fill out the form below.</span>
+					<h2 class="lng-section__contactme">Contact Me</h2>
+						<p class="lng-contactme__desc">If you have any questions or suggestions for cooperation, please fill out the form below.</p>
 						<div class="contact__container container grid">
 							<div class="contact__content">
 								<div class="contact__information">
@@ -874,8 +898,11 @@
 										<h3 class="contact__card-title">WhatsApp</h3>
 										<span class="contact__card-data">+7-999-194-03-98</span>
 										<span class="contact__button">
-											<a href="whatsapp://send?phone=+9370309861"><font color='#E06257'>Call me</a></font><i class="uil uil-arrow-right contact__button-icon"></i>
-											
+											<a href="whatsapp://send?phone=+9370309861" target="_blank">
+												<font color='#E06257'>
+													<p class="lng-whatsapp__callme">Call me</p>
+												</font></a>
+												<i class="uil uil-arrow-right contact__button-icon"></i>
 										</span>
 									</div>
 									
@@ -885,7 +912,10 @@
 										<h3 class="contact__card-title">Email</h3>
 										<span class="contact__card-data">jarekismail@gmail.com</span>
 										<span class="contact__button">
-											<a href="mailto:jarekismail@gmail.com?body=Привет, подпишитесь на рассылку"><font color='#E06257'>Write me</font></a>
+											<a href="mailto:jarekismail@gmail.com?body=Привет, подпишитесь на рассылку">
+												<font color='#E06257'>
+													<p class="lng-email__writeme">Write me</p>
+												</font></a>
 												<i class="uil uil-arrow-right contact__button-icon"></i>
 										</span>
 									</div>
@@ -896,7 +926,10 @@
 										<h3 class="contact__card-title">VK</h3>
 										<span class="contact__card-data">r3duct</span>
 										<span class="contact__button">
-											<a href="https://vk.com/r3duct"><font color='#E06257'>Write me</font></a>
+											<a href="https://vk.com/r3duct" target="_blank">
+												<font color='#E06257'>
+													<p class="lng-vk__writeme">Write me</p>
+												</font></a>
 											<i class="uil uil-arrow-right contact__button-icon"></i>
 										</span>
 									</div>
@@ -915,7 +948,7 @@
 											data-reg="^[а-яА-ЯёЁa-zA-Z0-9]+(([,.] |[ '-])[а-яА-ЯёЁa-zA-Z0-9]+)*([.,'-]?)$"
 										/>
 										<label for="name">Username</label>
-										<span>Username</span>
+										<span class="lng-username">Username</span>
 									</div>
 									<div class="input__container">
 										<input 
@@ -945,7 +978,8 @@
 										<span>Message</span>
 									</div>
 									<div>
-										<button type="submit" id="button" class="button button--flex">Send Message
+										<button type="submit" id="button" class="button button--flex">
+											<p class="lng-send-message">Send Message</p>
 											<i class="uil uil-navigator button__icon"></i>
 										</button>
 									</div>
@@ -960,19 +994,25 @@
 					<div class="footer__bg">
 						<div class="footer__container container grid">
 							<div>
-								<h1 class="footer__title">Andrey</h1>
-								<span class="footer__subtitle">Fullstack developer</span>
+								<h1 class="lng-footer__title">Andrey</h1>
+								<span class="lng-footer__subtitle">Fullstack developer</span>
 							</div>
 
 							<ul class="footer__links">
 								<li>
-									<a href="#services" class="footer__link">Services</a>
+									<a href="#services" class="footer__link">
+										<p class="lng-footer__services">Services</p>
+									</a>
 								</li>
 								<li>
-									<a href="#portfolio" class="footer__link">Work</a>
+									<a href="#portfolio" class="footer__link">
+										<p class="lng-footer__work">Work</p>
+									</a>
 								</li>
 								<li>
-									<a href="#contact" class="footer__link">Contact</a>
+									<a href="#contact" class="footer__link">
+										<p class="lng-footer__contact">Contact</p>
+									</a>
 								</li>
 							</ul>
 
@@ -990,10 +1030,12 @@
 							<div class="buymeacoffee">
 								<a href="https://www.buymeacoffee.com/inputstudios">
 									<img src="https://img.buymeacoffee.com/button-api/?text=Buy me a book&emoji=📖&slug=inputstudios&
-										button_colour=40DCA5&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" /></a>
+										button_colour=BC807B&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00">
+									</img>
+								</a>
 							</div>
 						</div>
-						<p class="footer__copy">&#169; Input Studios. All right reserved</p>
+						<p class="lng-footer__copy">&#169; Input Studios. All right reserved</p>
 					</div>
 				</footer>
 		</main>

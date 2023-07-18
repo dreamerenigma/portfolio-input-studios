@@ -107,7 +107,7 @@ let mixerPortfolio = mixitup('.portfolio__container', {
 });
 
 /*============== Link Active Portfolio ==============*/
-const linkPortfolio = document.querySelectorAll('.portfolio__item')
+const linkPortfolio = document.querySelectorAll('.lng-portfolio__all, .lng-portfolio__web, .lng-portfolio__app, .lng-portfolio__design')
 
 function activePortfolio(){
 	linkPortfolio.forEach(l=> l.classList.remove('active-portfolio'))
