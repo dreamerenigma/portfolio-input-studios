@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.0",
+    "gsap": "^3.12.2",
+    "jquery": "^3.7.0"
+  },
+  "name": "portfolio",
+  "description": "**portfolio** © [Yousuf](https://github.com/inputstudios)  \r Authored and maintained by Andrey Trepalin.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
