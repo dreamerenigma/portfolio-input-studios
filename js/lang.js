@@ -50,9 +50,9 @@ const langArr = {
       "es": "Desarrollador de pila completo",
    },
    "home__description" : {
-      "ru": "Высокий уровень знаний в области веб-дизайна и разработки, выполнение качественной работы.",
-      "en": "High level experience in web design and development knowledge, producing quality work.",
-      "es": "Experiencia de alto nivel en diseño web y conocimientos de desarrollo, produciendo un trabajo de calidad.",
+      "ru": "Высокий уровень знаний в области веб-дизайна и разработки, качество выполненных заказов.",
+      "en": "High level of knowledge in the field of web design and development, quality of completed orders.",
+      "es": "Alto nivel de conocimiento en el campo del diseño y desarrollo web, calidad de los pedidos completados.",
    },
    "home__send" : {
       "ru": "Связь со мной",
@@ -75,9 +75,9 @@ const langArr = {
       "es": "Mi introducción",
    },
    "about__description" : {
-      "ru": "Веб-разработчик, обладающий обширными знаниями и многолетним опытом работы в области веб-технологий и UI/UX-дизайна, выполняющий качественную работу.",
-      "en": "Web developer, with extensive knowledge and years of experience, working in web technologies and UI / UX design, delivering quality work.",
-      "es": "Desarrollador web, con amplio conocimiento y años de experiencia, trabajando en tecnologías web y diseño UI/UX, entregando un trabajo de calidad.",
+      "ru": "Веб-разработчик, обладающий обширными знаниями и многолетним опытом работы в области веб-технологий и UI/UX-дизайна, выполняющий качественно заказы.",
+      "en": "Web developer, with extensive knowledge and many years of experience in the field of web technologies and UI / UX design, who fulfills orders with high quality.",
+      "es": "Un desarrollador web con amplios conocimientos y muchos años de experiencia en el campo de las tecnologías web y el diseño UI/UX, que cumple con los pedidos con alta calidad.",
    },
    "about__info-year" : {
       "ru": "Многолетний <br> опыт",

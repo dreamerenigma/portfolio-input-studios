@@ -1,6 +1,6 @@
 /*===================== GOOGLE FONTS =====================*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:300);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:300');
 
 /*===================== VARIABLES CSS =====================*/
 :root {
@@ -54,10 +54,10 @@
 	--mb-2-5: 2.5rem;
 	--mb-3: 3rem;
 
-		/*=========== z index ===========*/
-		--z-tooltip: 10;
-		--z-fixed: 100;
-		--z-modal: 1000;
+	/*=========== z index ===========*/
+	--z-tooltip: 10;
+	--z-fixed: 100;
+	--z-modal: 1000;
 }
 
 /*============ BREAKPOINT ============*/

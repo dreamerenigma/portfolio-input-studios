@@ -2,3 +2,8 @@
 
 # encoding Apache in UTF-8
 AddDefaultCharset UTF-8
+
+RewriteEngine on
+
+# error 404
+ErrorDocument 404 https://inputstudios.ru/404.html
