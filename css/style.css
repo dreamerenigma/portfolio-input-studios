@@ -57,6 +57,7 @@
 	/*=========== z index ===========*/
 	--z-tooltip: 10;
 	--z-fixed: 100;
+	--z-input: 500;
 	--z-modal: 1000;
 }
 
@@ -87,9 +88,82 @@ body.dark-theme{
 }
 
 /*=========== Language Selection ===========*/
-.change-lang {
-	background-color: transparent;
+.lang-menu {
+	margin-top: var(--mb-3);
+	position: relative;
+}
+
+.selected-lang {
+   cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	line-height: 2;
+	width: 100px;
+	margin-bottom: 45px;
+}
+
+.selected-lang::before {
+   content: '';
+   display: block;
+   width: 32px;
+   height: 32px;
+   background-image: url(https://www.countryflagicons.com/FLAT/32/RU.png);
+}
+
+.lang-menu ul {
+	margin: 0;
+	padding: 0;
+	background-color: var(--body-color);
+	border: 1px solid var(--body-color);
+	box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.2);
+	border-radius: .3rem;
+	display: none;
+	position: absolute;
+	top: 50px;
+	left: 0;
+}
+
+.lang-menu ul li {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+.lang-menu ul li a {
+	width: 140px;
+	display: block;
+	padding: .3rem .6rem;
 	color: var(--title-color);
+}
+
+.lang-menu ul li a:before {
+	content: '';
+   display: inline-block;
+   width: 32px;
+   height: 32px;
+	margin-right: .6rem;
+	vertical-align: middle;
+	background-image: url(https://www.countryflagicons.com/FLAT/32/RU.png);
+}
+
+.lang-menu ul li a:hover {
+	background-color: #f2f2f2;
+}
+
+.ru:before {
+	background-image: url(https://www.countryflagicons.com/FLAT/32/RU.png);
+}
+
+.us:before {
+	background-image: url(https://www.countryflagicons.com/FLAT/32/US.png);
+}
+
+.es:before {
+	background-image: url(https://www.countryflagicons.com/FLAT/32/ES.png);
+}
+
+.lang-menu:hover ul {
+	display: block;
 }
 
 /*=========== Button Dark/Light ===========*/
@@ -134,7 +208,6 @@ body{
 h1,h2,h3,h4{
 	color: var(--title-color);
 	font-weight: var(--font-semi-bold);
-	align-items: unset;
 }
 
 ul{
@@ -143,7 +216,6 @@ ul{
 
 a{
 	text-decoration: none;
-	color: var(--title-color);
 }
 
 img{
@@ -201,13 +273,13 @@ img{
 	align-items: center;
 }
 
-.nav__logo,
+.lng-nav__logo,
 .nav__toggle{
 	color: var(--title-color);
 	font-weight: var(--font-medium);
 }
 
-.nav__logo:hover{
+.lng-nav__logo:hover{
 	color: var(--first-color);
 }
 
@@ -715,6 +787,7 @@ img{
 	margin-bottom: var(--mb-1);
 }
 
+.lng-services__front,
 .lng-services__brand {
 	margin-bottom: var(--mb-1-5);
 }
@@ -1175,7 +1248,7 @@ textarea.input{
 	font-size: 1rem;
 	font-weight: var(--font-medium);
 	pointer-events: none;
-	z-index: 1000;
+	z-index: var(--z-tooltip);
 	transition: .5s;
 }
 
@@ -1193,7 +1266,7 @@ textarea.input{
 	font-size: var(--small-font-size);
 	padding: 0 .4rem;
 	pointer-events: none;
-	z-index: 500;
+
 }
 
 .input__container span::before,
@@ -1272,9 +1345,47 @@ textarea.input{
 	color: var(--first-color-lighter);
 }
 
+.footer__item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.lng-privacy {
+	text-align: center;
+	font-size: var(--normal-font-size);
+	color: #FFF;
+}
 .lng-footer__copy{
 	font-size: var(--smaller-font-size);
 	text-align: center;
+	color: #FFF;
+}
+.footer__privacy {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.lng-privacy:hover {
+	color: #FFF;
+	outline: none;
+}
+.lng-privacy:active {
+	color: #E06257;
+	outline: none;
+}
+.lng-footer__copy{
+	margin-top: var(--mb-1);
+	text-align: center;
+}
+.lng-footer__copy a{
+	transition: all .2s ease-in-out;
+	text-decoration: none;
+	color: #f9b1d0;
+}
+.lng-footer__right {
+	display: flex;
+	justify-content: center;
+	padding: 12px 0 0 0;
 	color: #FFF;
 }
 
@@ -1593,6 +1704,19 @@ textarea.input{
 	span.apk__size{
 		display: none;
 	}
+
+	.lang-menu ul {
+		margin: 0;
+		padding: 0;
+		background-color: var(--body-color);
+		border: 1px solid var(--body-color);
+		box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.2);
+		border-radius: .3rem;
+		display: none;
+		position: absolute;
+		top: -145px;
+		left: 0;
+	}
 }
 
 @media screen and (min-width: 768px){
@@ -1606,7 +1730,7 @@ textarea.input{
 	}
 
 	.section{
-		padding: 6rem 0 2rem;
+		padding: 6rem 1rem 2rem;
 	}
 	.section__subtitle{
 		margin-bottom: 4rem;
@@ -1623,7 +1747,7 @@ textarea.input{
 	}
 
 	.nav{
-		height: calc(var(--header-height) + 1.5rem);
+		height: calc(var(--header-height) + .5rem);
 		column-gap: 1rem;
 	}
 
@@ -1639,6 +1763,19 @@ textarea.input{
 	}
 	.nav__menu{
 		margin-left: auto;
+	}
+
+	.lang-menu ul {
+		margin: 0;
+		padding: 0;
+		background-color: var(--body-color);
+		border: 1px solid var(--body-color);
+		box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.2);
+		border-radius: .3rem;
+		display: none;
+		position: absolute;
+		top: 50px;
+		left: 0;
 	}
 	.change-theme{
 		margin: 0;
@@ -1748,8 +1885,49 @@ textarea.input{
 	.footer__bg{
 		padding: 3rem 0 1rem;
 	}
+
+	.footer__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	.lng-footer__copy{
-		margin-top: var(--mb-3);
+		font-size: var(--smaller-font-size);
+		text-align: center;
+		color: #FFF;
+	}
+	.footer__privacy {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.lng-privacy:hover {
+		color: #FFF;
+		outline: none;
+	}
+	.lng-privacy:active {
+		color: #E06257;
+		outline: none;
+	}
+	.lng-footer__copy{
+		margin-top: var(--mb-1);
+		text-align: center;
+	}
+	.lng-footer__copy a{
+		transition: all .2s ease-in-out;
+		text-decoration: none;
+		color: #f9b1d0;
+	}
+	.lng-footer__right {
+		display: flex; 
+		justify-content: center;
+		padding: 12px 0 0 0;
+	}
+	.footer__link:hover{
+		color: var(--first-color);
+	}
+	.footer__link:active{
+		color: var(--first-color);
 	}
 }
 
@@ -1800,6 +1978,7 @@ textarea.input{
 		grid-template-columns: repeat(2, 330px);
 		gap: 3rem;
 	}
+	
 	.footer__social{
 		font-size: 1.25rem;
 		margin-right: var(--mb-1-5);
@@ -1831,7 +2010,37 @@ textarea.input{
 		column-gap: 2rem;
 	}
 
+	.footer__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	.lng-footer__copy{
-		margin-top: var(--mb-3);
+		font-size: var(--smaller-font-size);
+		text-align: center;
+		color: #FFF;
+	}
+	.footer__privacy {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.lng-privacy:active {
+		color: #E06257;
+		outline: none;
+	}
+	.lng-footer__copy{
+		margin-top: var(--mb-1);
+		text-align: center;
+	}
+	.lng-footer__copy a{
+		transition: all .2s ease-in-out;
+		text-decoration: none;
+		color: #E06257;
+	}
+	.lng-footer__right {
+		display: flex; 
+		justify-content: center;
+		padding: 12px 0 0 0;
 	}
 }
