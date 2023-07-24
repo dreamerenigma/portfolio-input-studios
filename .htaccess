@@ -3,7 +3,11 @@
 # encoding Apache in UTF-8
 AddDefaultCharset UTF-8
 
-RewriteEngine on
+RewriteEngine On
 
-# error 404
+# 403 Forbidden
+ErrorDocument 403 https://inputstudios.ru/403.html
+# 404 Not Found
 ErrorDocument 404 https://inputstudios.ru/404.html
+# 500 Internal Server Error
+ErrorDocument 500 https://inputstudios.ru/500.html

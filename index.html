@@ -8,7 +8,7 @@
 	<meta name="description" content="Web developer, with extensive knowledge and many years of experience in the 
 			field of web technologies and UI / UX design, who fulfills orders with high quality" />
 	<!--===================== ICON =====================-->
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<!--===================== UNICONS =====================-->
 	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 	<!--===================== SWIPER CSS =====================-->
@@ -93,25 +93,24 @@
 			<!-- Language Selection -->
 			<div class="lang-menu">
 				<div class="selected-lang">
-					<a>Russian</a>
+					Russian
+					<ul>
+						<li>
+							<a href="#" class="ru">Russian</a>
+						</li>
+						<li>
+							<a href="#" class="us">English</a>
+						</li>
+						<li>
+							<a href="#" class="es">Spanish</a>
+						</li>
+					</ul>
 					<!-- <select>
 						<option value="ru" selected>RU</option>
 						<option value="us">EN</option>
 						<option value="es">ES</option>
 					</select> -->
 				</div>
-
-				<ul>
-					<li>
-						<a href="#" class="ru">Russian</a>
-					</li>
-					<li>
-						<a href="#" class="us">English</a>
-					</li>
-					<li>
-						<a href="#" class="es">Spanish</a>
-					</li>
-				</ul>
 			</div>
 
 			<!-- Theme change button -->
@@ -989,7 +988,7 @@
 					<form action="send_mail.php" name="form" method="POST">
 						<div class="input__container">
 							<input type="text" class="input" id="name" name="name"
-								data-reg="^[а-яА-ЯёЁa-zA-Z0-9]+(([,.] |[ '-])[а-яА-ЯёЁa-zA-Z0-9]+)*([.,'-]?)$" />
+								data-reg="^[а-яА-ЯёЁa-zA-Z0-9]+(([,.] |[ '-])[а-яА-ЯёЁa-zA-Z0-9]+)*([.,'-]?)$" style="border: 2px solid var(--text-color);" />
 							<label for="name">Username</label>
 							<span class="username">Username</span>
 						</div>
