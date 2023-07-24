@@ -24,7 +24,6 @@
 	--container-color: #FFF;
 	--scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
 	--scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
-	--scrollup-color: hsl(var(--hue-color), 33%, 61%);
 
 	/*=========== Font and typography ===========*/
 	--body-font: 'Poppins', sans-serif;
@@ -137,7 +136,6 @@ body.dark-theme{
    height: 32px;
 	margin-right: .6rem;
 	vertical-align: middle;
-	background-image: url(https://www.countryflagicons.com/FLAT/32/RU.png);
 }
 .lang-menu ul li a:hover {
 	background-color: #f2f2f2;
@@ -153,6 +151,12 @@ body.dark-theme{
 }
 .lang-menu:hover ul {
 	display: block;
+}
+.lang-menu a:active {
+	color: #000;
+}
+.lang-menu a:hover {
+	color: #000;
 }
 
 /*=========== Button Dark/Light ===========*/
@@ -1048,7 +1052,6 @@ img{
 .contact__button-icon{
 	font-size: 1rem;
 	transition: .3s;
-	padding-left: 1;
 }
 .contact__button:hover 
 .contact__button-icon{
@@ -1156,10 +1159,14 @@ textarea.input{
 	font-size: var(--small-font-size);
 }
 
-.lng-footer__services:hover {
+.lng-footer__services:hover,
+.lng-footer__work:hover,
+.lng-footer__contact:hover {
 	color: #FFF;
 }
-.lng-footer__services:active {
+.lng-footer__services:active,
+.lng-footer__work:active,
+.lng-footer__contact:active {
 	color: #F9B1D0;
 }
 .footer__links{
@@ -1175,7 +1182,7 @@ textarea.input{
 	margin-right: var(--mb-1-5);
 }
 .footer__social:hover{
-	color: var(--first-color-lighter);
+	color: var(--first-color-darker);
 }
 .footer__item {
 	display: flex;
@@ -1244,7 +1251,7 @@ textarea.input{
 .scrollup{
 	position: fixed;
 	right: 2rem;
-	background-color: var(--scrollup-color);
+	background-color: var(--first-color-darker);
 	opacity: 0;
 	padding: 0 .3rem;
 	border-radius: .4rem;
