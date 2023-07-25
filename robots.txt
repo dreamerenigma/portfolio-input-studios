@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /404.html
-Disallow: /403.html
-Disallow: /500.html
