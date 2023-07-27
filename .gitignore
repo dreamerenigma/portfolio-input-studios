@@ -1,1 +1,13 @@
+# Ignore list of project files
+# Ignore ALL files and directories, including subdirectories and files in them
+*
+# -------- DIRECTORIES --------
 node_modules
+dist/
+.parcel-cache
+
+# -------- FILES --------
+.hintrc
+.htaccess
+sitemap.xml
+robots.txt
