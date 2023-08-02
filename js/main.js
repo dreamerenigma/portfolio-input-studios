@@ -77,8 +77,6 @@ let modal = function(modalClick){
 	modalViews[modalClick].classList.add('active-modal')
 }
 
-
-
 modalBtns.forEach((modalBtn, i) => {
 	modalBtn.addEventListener('click', () => {
 		modal(i)
@@ -94,7 +92,6 @@ modalCloses.forEach((modalClose) => {
 		})
 	})
 })
-
 
 /*==================== MIXTUP FILTER PORTFOLIO ====================*/
 let mixerPortfolio = mixitup('.portfolio__container', {
@@ -216,10 +213,10 @@ window.addEventListener('scroll', scrollUp)
 function scrollUp(){
 	const scrollUp = document.getElementById('scroll-up');
 	// When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll
-	if(this.scrollY > 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+	if(this.scrollY > 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll');
 }
 
-/*======================== DARK LIGHT THEME========================*/
+/*======================== DARK LIGHT THEME ========================*/
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'uil-sun'
@@ -248,3 +245,6 @@ themeButton.addEventListener('click', () => {
 	localStorage.setItem('selected-theme', getCurrentTheme())
 	localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+/*======================== PRELOADER ========================*/
+preloader.classList.add('preloader--hide')
