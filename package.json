@@ -1,13 +1,14 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
-  "description": "**portfolio** © [Yousuf](https://github.com/inputstudios)  \r Authored and maintained by Andrey Trepalin.",
-  "main": "dist/index.js",
-  "author": "Andrey Trepalin",
+  "version": "2.0.0",
+  "description": "**portfolio** © [Input Studios](https://github.com/inputstudios)  \r Authored and maintained by Andrey Trepalin.",
+  "author": "Andrey Trepalin <jarekismail@gmail.com>",
   "license": "ISC",
+  "type": "module",
   "scripts": {
-    "start": "parcel serve ./index.html",
-    "build": "parcel build ./index.html"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel serve ./index.html --open -p 3000 --host 127.0.0.1",
+    "build": "parcel build ./index.html --dist-dir build"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.9.3",
@@ -16,7 +17,10 @@
   "dependencies": {
     "bootstrap": "^5.3.0",
     "gsap": "^3.12.2",
-    "jquery": "^3.7.0",    
+    "jquery": "^3.7.0",
     "js-cookie": "^3.0.5"
+  },
+  "targets": {
+    "main": false
   }
 }
