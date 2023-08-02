@@ -1,47 +1,23 @@
-/*======================== COOKIE POLICY ========================*/
-import '/scss/styles.scss'
-import Cookies from 'js-cookie'
+const cookieBox = document.querySelector(".cookie-popup"),
+   buttons = document.querySelectorAll(".lng-button-accept, .lng-button-decline");
 
-const COOKIE_NAME = 'visit'
-const expires = new Date(new Date().getTime() + 2 * 60 * 1000)
+const executeCodes = () => {
+   // if cookie contains visit it will be returned and below of this code will not run
+   if (document.cookie.includes("visit")) return;
+   cookieBox.classList.add("show");
 
-function toHTML() {
-   return `
-      <div class="cookie-alert cookie-alert--js">
-         <div class="cookie-alert__container">
-            <div class="cookie-alert__left">
-               <p class="mb-0">
-                  Для коррекнтной работы сайта мы используем файлы Cookie. Это 
-                  позволяет нам запомнить ваши настройки и предпочтения. <br />Для 
-                  дальнейшего использования сайта вы должны прнять согласие на 
-                  использование файлов Cookie.
-               </p>
-            </div>
-            <div class="cookie-alert__right">
-               <a href="https://inputstudios.ru/cookie_policy.html" target="_blank">
-                  Подробнее
-               </a>
-               <button class="btn btn-success px-3 btn-sm ms-3 cookie-alert__btn--js">
-                  Ок. Согласен!
-               </button>
-            </div>
-         </div>
-      </div>
-   `
-}
+   buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+         cookieBox.classList.remove("show");
 
-if (!Cookies.get(COOKIE_NAME)) {
-   document.querySelector('body').insertAdjacentHTML('beforeend', toHTML())
-   const cookieAlert = document.querySelector('.cookie-alert--js')
-   const cookieBtn = document.querySelector('.cookie-alert__btn--js')
+         // if button has acceptBtn id
+         if (button.id == "acceptBtn") {
+            // set cookie for month. 60 = 1 min, 60 = 1 hours, 24 = 1 day, 30 = 30 days
+            document.cookie = "cookieBy= visit; max-age=" + 60 * 60 * 24 * 30;
+         }
+      });
+   });
+};
 
-   setTimeout(() => cookieAlert.classList.add('is-show'), 1000)
-
-   cookieBtn.addEventListener('click', setCookie)
-
-   function setCookie() {
-      cookieAlert.classList.remove('is-show')
-      setTimeout(() => cookieAlert.remove(), 1000)
-      Cookies.set(COOKIE_NAME, true, { expires })
-   }
-}
+// executeCodes function will be called on webpage load
+window.addEventListener("load", executeCodes);

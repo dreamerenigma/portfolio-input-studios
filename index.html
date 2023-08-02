@@ -1,20 +1,24 @@
 <!DOCTYPE html>
+<!-- Coding by InputStudios | https://inputstudios.ru -->
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="expires" content="0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta charset="UTF-8" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<meta name="description" content="Web developer, with extensive knowledge and many years of experience in the 
-		field of web technologies and UI / UX design, who fulfills orders with high quality">
+		field of web technologies and UI / UX design, who fulfills orders with high quality" />
+	<!--===================== BOXICONS CSS =====================-->
+	<link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
 	<!--===================== ICON =====================-->
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<!--===================== UNICONS =====================-->
-	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 	<!--===================== SWIPER CSS =====================-->
-	<link rel="stylesheet" href="./css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./css/swiper-bundle.min.css" />
 	<!--===================== CSS =====================-->
-	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/style.css" />
+	<link rel="stylesheet" href="./css/cookie.css" />
 	<!--===================== BOOTSTRAP =====================-->
 	<!-- <link 
       rel="stylesheet" 
@@ -44,19 +48,6 @@
 	<title class="lng-title">Responsive Portfolio by Input Studios</title>
 </head>
 <body>
-	<!--==================== PRELOADER ====================-->
-	<div class="preloader" id="preloader">
-      <div class="wrapper">
-         <div class="circle"></div>
-         <div class="circle"></div>
-         <div class="circle"></div>
-         <div class="shadow"></div>
-         <div class="shadow"></div>
-         <div class="shadow"></div>
-         <span>Loading</span>
-      </div>
-   </div>
-
 	<!--===================== HEADER =====================-->
 	<header class="header" id="header">
 		<nav class="nav container">
@@ -142,6 +133,19 @@
 
 	<!--===================== MAIN =====================-->
 	<main class="main">
+		<!--==================== PRELOADER ====================-->
+		<div class="preloader" id="preloader">
+			<div class="wrapper">
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="shadow"></div>
+				<div class="shadow"></div>
+				<div class="shadow"></div>
+				<span class="lng-loading">Loading</span>
+			</div>
+		</div>
+
 		<!--==================== HOME ====================-->
 		<section class="home section" id="home">
 			<div class="home__container container grid">
@@ -547,7 +551,7 @@
 				<div class="services__content">
 					<div>
 						<i class="uil uil-web-grid services__icon"></i>
-						<h3 class="lng-services__designer">UI/UX Designer</h3>
+						<h3 class="lng-services__designer">UI/UX Design</h3>
 					</div>
 
 					<span class="button button--flex button--small button--link services__button">
@@ -557,7 +561,7 @@
 
 					<div class="services__modal">
 						<div class="services__modal-content">
-							<h4 class="lng-services__modal-designer">UI/UX Designer</h4>
+							<h4 class="lng-services__modal-designer">UI/UX Design</h4>
 							<i class="uil uil-times services__modal-close"></i>
 
 							<ul class="services__modal-services grid">
@@ -585,7 +589,7 @@
 				<div class="services__content">
 					<div>
 						<i class="uil uil-arrow services__icon"></i>
-						<h3 class="lng-services__front">Frontend Developer</h3>
+						<h3 class="lng-services__front">Frontend Development</h3>
 					</div>
 
 					<span class="button button--flex button--small button--link services__button">
@@ -595,7 +599,7 @@
 
 					<div class="services__modal">
 						<div class="services__modal-content">
-							<h4 class="lng-services__modal-front">Frontend Developer</h4>
+							<h4 class="lng-services__modal-front">Frontend Development</h4>
 							<i class="uil uil-times services__modal-close"></i>
 
 							<ul class="services__modal-services grid">
@@ -623,7 +627,7 @@
 				<div class="services__content">
 					<div>
 						<i class="uil uil-pen services__icon"></i>
-						<h3 class="lng-services__brand">Branding Designer</h3>
+						<h3 class="lng-services__brand">Branding Design</h3>
 					</div>
 
 					<span class="button button--flex button--small button--link services__button">
@@ -633,7 +637,7 @@
 
 					<div class="services__modal">
 						<div class="services__modal-content">
-							<h4 class="lng-services__modal-brand">Branding &shy; Designer</h4>
+							<h4 class="lng-services__modal-brand">Branding Design</h4>
 							<i class="uil uil-times services__modal-close"></i>
 
 							<ul class="services__modal-services grid">
@@ -1131,6 +1135,23 @@
 				<i class="uil uil-arrow-up scrollup__icon"></i>
 			</a>
 		</div>
+
+		<!--===================== POPUP COOKIE CONSENT =====================-->
+		<div class="cookie-popup">
+			<div class="cookie-title">
+				<i class="bx bx-cookie"></i>
+				<h2 class="lng-cookie-consent">Cookie Consent</h2>
+			</div>
+
+			<div class="data">
+				<p class="lng-cookie-description">This website use cookie to help you have a superior adn more releavnt browsing expirence on the website.</p>
+				<a class="lng-button-read-more" href="http://inputstudios.ru/cookie_policy.html" target="_blank"> Read more...</a>
+			</div>
+			<div class="buttons">
+				<button class="lng-button-accept" id="acceptBtn">Accept</button>
+				<button class="lng-button-decline">Decline</button>
+			</div>
+		</div>
 	</main>
 
 	<!--===================== MIXTUP FILTER =====================-->
@@ -1150,7 +1171,7 @@
 	<script src="./js/app.js"></script>
 
 	<!--===================== COOKIE =====================-->
-	<script type="module" src="./js/cookie.js"></script>
+	<script type="module" src="./js/cookie.js" defer></script>
 
 	<!--===================== JQUERY JS =====================-->
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>

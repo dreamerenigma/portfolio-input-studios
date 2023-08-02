@@ -752,7 +752,7 @@ a.home__scroll-button:after {
   border-width: 0px;
   display: inline-block;
   background-color: var(--first-color);
-  color: #fff;
+  color: var(--title-color);
   padding: 1rem;
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
@@ -1037,13 +1037,9 @@ a.home__scroll-button:after {
   color: var(--first-color);
   margin-bottom: var(--mb-1);
 }
-.lng-services__brand {
-  margin-bottom: var(--mb-1-5);
-}
 .lng-services__designer {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-1-5);
-  font-weight: var(--font-medium);
 }
 .lng-services__modal-designer,
 .lng-services__modal-front,
@@ -1288,7 +1284,7 @@ a.home__scroll-button:after {
 }
 .lng-project__title,
 .lng-project__description {
-  color: #fff;
+  color: var(--title-color);
 }
 .project__img {
   width: 232px;
@@ -1841,6 +1837,7 @@ textarea.input {
 
 /* For medium devices */
 @media screen and (max-width: 568px) {
+  .lng-services__brand,
   .lng-services__front {
     margin-bottom: var(--mb-1-5);
   }
@@ -2019,7 +2016,7 @@ textarea.input {
     font-size: 2rem;
   }
   .services__content {
-    padding: 6rem 0 2rem 2.5rem;
+    padding: 6rem 2rem 2rem 2rem;
   }
   .services__modal-content {
     width: 450px;
