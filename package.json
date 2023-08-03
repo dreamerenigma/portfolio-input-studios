@@ -1,10 +1,23 @@
 {
   "name": "portfolio",
   "version": "2.0.0",
-  "description": "**portfolio** © [Input Studios](https://github.com/inputstudios)  \r Authored and maintained by Andrey Trepalin.",
+  "description": "A professional front-end template for building fast, robust, and adaptable web apps or sites. **portfolio** © [Andrey](https://github.com/inputstudios)  \r Authored and maintained by Andrey Trepalin.",
   "author": "Andrey Trepalin <jarekismail@gmail.com>",
   "license": "ISC",
   "type": "module",
+  "keywords": [
+    "template",
+    "front-end",
+    "portfolio"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inputstudios/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/inputstudios/portfolio/issues"
+  },
+  "homepage": "https://github.com/inputstudios/portfolio#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel serve ./index.html --open -p 3000 --host 127.0.0.1",
@@ -16,11 +29,24 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.0",
+    "browserslist": "^4.21.10",
     "gsap": "^3.12.2",
     "jquery": "^3.7.0",
     "js-cookie": "^3.0.5"
   },
   "targets": {
     "main": false
-  }
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead",
+    "not IE 11"
+  ],
+  "files": [
+    "LICENSE.txt",
+    "package.json",
+    "README.md"
+  ]
 }
