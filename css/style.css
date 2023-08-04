@@ -107,6 +107,7 @@ body.dark-theme {
   justify-content: space-between;
   line-height: 2;
   width: 100px;
+  background-color: transparent;
 }
 .selected-lang::before {
   content: "";

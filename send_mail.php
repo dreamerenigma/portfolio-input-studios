@@ -10,7 +10,7 @@
    $mail->CharSet = "UTF-8";
    $mail->IsHTML(true);
 
-   $mail->AddEmbeddedImage('img/logo.png', 'logo_2u');
+   $mail->AddEmbeddedImage('img/logo.webp', 'logo_2u');
 
    $name = $_POST["name"];
    $email = $_POST["email"];
