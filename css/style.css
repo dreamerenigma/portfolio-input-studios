@@ -1910,6 +1910,10 @@ textarea.input {
   .lng-services__front {
     margin-bottom: var(--mb-1-5);
   }
+  .show-scroll {
+    bottom: 6.5rem;
+    right: 20px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -2111,6 +2115,10 @@ textarea.input {
   }
   .footer__link:active {
     color: var(--first-color);
+  }
+  .show-scroll {
+    bottom: 4rem;
+    right: 20px;
   }
 }
 
