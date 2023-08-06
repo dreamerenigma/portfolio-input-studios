@@ -9,6 +9,7 @@ dist/
 .parcel-cache
 .vscode
 packages
+venv
 
 # -------- FILES --------
 .hintrc
