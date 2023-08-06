@@ -6,6 +6,7 @@
 # -------- DIRECTORIES --------
 node_modules
 dist/
+build
 .parcel-cache
 .vscode
 packages
