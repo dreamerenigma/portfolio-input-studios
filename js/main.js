@@ -2,7 +2,7 @@
 const navMenu = document.getElementById('nav-menu'),
 		navToggle = document.getElementById('nav-toggle'),
 		navClose = document.getElementById('nav-close')
-		
+
 /*========== MENU SHOW ==========*/
 /* Validate if constant exists */
 if(navToggle){
@@ -70,28 +70,51 @@ tabs.forEach(tab =>{
 
 /*==================== SERVICES MODAL ====================*/
 const modalViews = document.querySelectorAll('.services__modal'),
-		modalBtns = document.querySelectorAll('.services__button'),
-		modalCloses = document.querySelectorAll('.services__modal-close')
+    modalBtns = document.querySelectorAll('.services__button'),
+    modalCloses = document.querySelectorAll('.services__modal-close'),
+    servicesContent = document.querySelectorAll('.services__content');
 
-let modal = function(modalClick){
-	modalViews[modalClick].classList.add('active-modal')
+function openModal(modalIndex) {
+    modalViews[modalIndex].classList.add('active-modal');
+    document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+}
+
+function closeModal() {
+    modalViews.forEach((modalView) => {
+        modalView.classList.remove('active-modal');
+        document.getElementsByTagName('body')[0].style.overflow = 'visible';
+    });
 }
 
 modalBtns.forEach((modalBtn, i) => {
-	modalBtn.addEventListener('click', () => {
-		modal(i)
-		document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-	})
-})
+    modalBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeModal();
+        openModal(i);
+    });
+});
 
 modalCloses.forEach((modalClose) => {
-	modalClose.addEventListener('click', () => {
-		modalViews.forEach((modalView) => {
-			modalView.classList.remove('active-modal')
-			document.getElementsByTagName('body')[0].style.overflow = 'visible';
-		})
-	})
-})
+    modalClose.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeModal();
+    });
+});
+
+document.addEventListener('click', (e) => {
+    const modalContent = e.target.closest('.services__modal-content');
+    if (!modalContent) {
+        closeModal();
+    }
+});
+
+servicesContent.forEach((content, i) => {
+    content.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeModal();
+        openModal(i);
+    });
+});
 
 /*==================== MIXTUP FILTER PORTFOLIO ====================*/
 let mixerPortfolio = mixitup('.portfolio__container', {
@@ -114,29 +137,102 @@ function activePortfolio(){
 linkPortfolio.forEach(l=> l.addEventListener("click", activePortfolio))
 
 /*============= Portfolio popup =============*/
-document.addEventListener("click", (e) =>{
-	if(e.target.classList.contains("portfolio__button")){
-		togglePortfolioPopup();
-		portfolioItemDetails(e.target.parentElement);
-	}
-})
+let isPortfolioPopupOpen = false;
 
-function togglePortfolioPopup(){
-	document.querySelector(".portfolio__popup").classList.toggle("open");
-	document.getElementsByTagName('body')[0].style.overflow = 'visible';
+// Функция для закрытия модального окна
+function closePortfolioPopup() {
+  const activePopup = document.querySelector('.portfolio__popup.open');
+  if (activePopup) {
+    const popupId = activePopup.id;
+    togglePortfolioPopup(`#${popupId}`);
+  }
 }
 
-document.querySelector(".portfolio__popup-close").addEventListener("click", togglePortfolioPopup);
+// Обработчик событий для кликов вне модального окна
+window.addEventListener("click", (e) => {
+  const modal = document.querySelector(".portfolio__popup.open");
 
-function portfolioItemDetails(portfolioItem){
-	document.getElementsByTagName('body')[0].style.overflow = 'hidden'; // the default for the css property
-	document.querySelector(".pp__thumbnail img").src = portfolioItem.querySelector(".portfolio__img").src;
-	document.querySelector(".portfolio__popup-subtitle span").innerHTML = portfolioItem.querySelector(".portfolio__title").innerHTML;
-	document.querySelector(".portfolio__popup-body").innerHTML = portfolioItem.querySelector(".portfolio__item-details").innerHTML;
+  if (isPortfolioPopupOpen && modal && modal.contains(e.target) && e.target !== modal) {
+    console.log("Клик внутри модального окна.");
+  } else {
+    console.log("Клик вне модального окна. Закрываем модальное окно.");
+    closePortfolioPopup();
+  }
+});
+
+document.querySelectorAll(".portfolio__card").forEach((card) => {
+  card.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const popupId = card.dataset.popup;
+    togglePortfolioPopup(popupId);
+    portfolioItemDetails(card);
+  });
+});
+
+document.querySelectorAll(".portfolio__popup-close").forEach((closeButton) => {
+  closeButton.addEventListener("click", () => {
+    console.log("Клик по кнопке закрытия. Закрываем модальное окно.");
+    closePortfolioPopup();
+  });
+});
+
+function togglePortfolioPopup(popupId) {
+  const portfolioPopup = document.querySelector(popupId);
+  if (!portfolioPopup) {
+    console.error(`Element with ID ${popupId} not found.`);
+    return;
+  }
+
+  isPortfolioPopupOpen = !isPortfolioPopupOpen;
+
+  if (isPortfolioPopupOpen) {
+    portfolioPopup.classList.add("open");
+    document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+  } else {
+    portfolioPopup.classList.remove("open");
+    document.getElementsByTagName('body')[0].style.overflow = 'visible';
+  }
+}
+
+function portfolioItemDetails(portfolioItem) {
+  const cardIndex = portfolioItem.dataset.index;
+  document.querySelector(`.pp__thumbnail img`).src = portfolioItem.querySelector(".portfolio__img").src;
+
+  let subtitleElement = portfolioItem.querySelector(".lng-portfolio__web-card, .lng-portfolio__app-card-2");
+  console.log("subtitleElement:", subtitleElement);
+
+  if (subtitleElement) {
+    const subtitleClass = portfolioItem.classList.contains('web') ? 'lng-portfolio__web-card' : 'lng-portfolio__app-card-2';
+    console.log("subtitleClass:", subtitleClass);
+
+    const subtitleTarget = document.querySelector(`.lng-portfolio__popup-subtitle-${cardIndex} span`);
+    console.log("subtitleTarget:", subtitleTarget);
+
+    const subtitleContent = subtitleElement.querySelector(`.${subtitleClass}`);
+    if (subtitleContent) {
+      subtitleTarget.innerHTML = subtitleContent.innerHTML;
+    }
+  }
+
+  const titleElement = portfolioItem.querySelector(".portfolio__item-details h3");
+  if (titleElement) {
+    const titleTarget = document.querySelector(`.lng-details__title-${cardIndex}`);
+    if (titleTarget) {
+      titleTarget.innerHTML = titleElement.innerHTML;
+    }
+  }
+
+  const descriptionElement = portfolioItem.querySelector(".portfolio__item-details p");
+  if (descriptionElement) {
+    const descriptionTarget = document.querySelector(`.lng-details__description-${cardIndex}`);
+    if (descriptionTarget) {
+      descriptionTarget.innerHTML = descriptionElement.innerHTML;
+    }
+  }
 }
 
 /*==================== TESTIMONIAL ====================*/
-let swiper = new Swiper(".testimonial__container", {
+swiper = new Swiper(".testimonial__container", {
 	loop: true,
 	grabCursor: true,
 	spaceBetween: 24,
@@ -248,3 +344,13 @@ themeButton.addEventListener('click', () => {
 
 /*======================== PRELOADER ========================*/
 preloader.classList.add('preloader--hide')
+
+/*======================== reCAPTCHA v3 ========================*/
+function validateForm() {
+  grecaptcha.ready(function() {
+    grecaptcha.execute('6LcFQ5coAAAAAMMM7LDW3aXZFd3yJxYZ3ac9XXWl', {action: 'submit'}).then(function(token) {
+      // Добавьте отправку формы с токеном reCAPTCHA
+      document.form.submit();
+    });
+  });
+}

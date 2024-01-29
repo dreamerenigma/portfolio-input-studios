@@ -68,6 +68,9 @@
   border: none;
   outline: none;
   cursor: pointer;
+  border-style: dashed;
+  border-radius: 20px;
+  margin-left: 20px;
 }
 
 /* HEADER */
@@ -145,13 +148,14 @@
   margin-right: 10px;
 }
 
-.chatbox__heading--header {
+.lng-chatbox__heading--header {
   font-size: 1.2rem;
   color: white;
 }
 
-.chatbox__description--header {
+.lng-chatbox__description--header {
   font-size: 0.9rem;
+  line-height: 1.2rem;
   color: white;
 }
 
@@ -205,11 +209,16 @@
   text-align: left;
 }
 
-.chatbox__send--footer {
+.lng-chatbox__send--footer {
   color: white;
 }
 
-.cahtbox__button a {
+.chatbox__button {
+  width: 100%;
+  height: 100%;
+}
+
+.chatbox__button a {
   color: #000;
   position: absolute;
 }
@@ -238,10 +247,17 @@
   background-color: var(--first-color-alt);
 }
 
-.chatbox-svg {
+.chatbox-svg-message {
   margin: 0;
   width: 100%;
   fill: var(--title-color);
+}
+
+.chatbox-svg-bot {
+  width: 150px; /* Set to your desired width */
+  height: 150px; /* Set to your desired height */
+  fill: var(--title-color);
+  display: none;
 }
 
 /*==================== MEDIA QUERIES ====================*/

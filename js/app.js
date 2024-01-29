@@ -41,6 +41,7 @@ function formCheck(e) {
    const isAllValid = allValid.reduce((acc, current) => {
       return acc && current;
    });
+
    if (!Boolean(Number(isAllValid))) {
       alert("Заполните поля правильно!");
       return;
@@ -55,10 +56,13 @@ async function formSubmit() {
       let result = await response.json();
       alert(result.message)
       formReset();
+      validFormArr.forEach((el) => {
+        el.style.border = "2px solid var(--text-color)";
+     });
    } else {
       alert("Код ошибки: " + response.status);
    }
-} 
+}
 
 function serializeForm(formNode) {
    return new FormData(form);
@@ -75,6 +79,6 @@ function formReset() {
    form.reset();
    validFormArr.forEach((el) => {
       el.setAttribute("is-valid", 0);
-      el.style.border = "none";
+      el.style.border = "2px solid var(--text-color)";
    });
 }

@@ -91,87 +91,78 @@ body.dark-theme {
 }
 
 /*=========== Language Selection ===========*/
-.show-menu {
-  margin-top: var(--mb-3);
+.lang-menu {
+  display: inline-block;
   position: relative;
 }
 
-.show-select-lang {
+/* Стилизация самого выпадающего списка */
+.custom-select {
   position: relative;
-  right: 100px;
+  font-size: 16px;
 }
 
-.selected-lang {
+/* Стилизация выбранного элемента */
+.selected-option {
+  padding: 8px 20px 8px 8px;
+  border: 1px solid var(--body-color);
+  border-radius: 4px;
+  background-color: var(--body-color);
+  color: var(--title-color);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  line-height: 2;
-  width: 100px;
-  background-color: transparent;
 }
-.selected-lang::before {
-  content: "";
-  display: block;
-  width: 28px;
-  height: 28px;
-  background-image: url(https://www.countryflagicons.com/FLAT/32/RU.png);
+
+/* Стилизация изображения флага в выбранном элементе */
+.selected-option img {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  margin-right: 10px;
 }
-.lng-default-lang {
-  color: var(--title-color);
-  font-size: var(--small-font-size);
-  font-weight: var(--font-medium);
-}
-.lang-menu ul {
-  margin: 0;
-  padding: 0;
-  background-color: var(--body-color);
-  border: 1px solid var(--body-color);
-  box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
+
+/* Стилизация опций в выпадающем списке */
+.languageSelect {
   display: none;
   position: absolute;
-  top: 50px;
+  top: 130%;
   left: 0;
+  right: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+  min-width: 150px;
+  flex-direction: column;
+  justify-content: flex-start;
 }
-.lang-menu ul li {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-}
-.lang-menu ul li a {
-  width: 140px;
-  display: block;
-  padding: 0.3rem 0.6rem;
+
+/* Стилизация отдельной опции */
+.option {
+  padding: 8px 20px 8px 8px;
+  border: 1px solid var(--body-color);
+  border-top: none;
+  background-color: var(--body-color);
   color: var(--title-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.lang-menu ul li a:before {
-  content: "";
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  margin-right: 0.6rem;
-  vertical-align: middle;
+
+/* Стилизация изображения флага в опции */
+.option img {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  margin-right: 10px;
 }
-.lang-menu ul li a:hover {
-  background-color: #f2f2f2;
-}
-.ru:before {
-  background-image: url(https://www.countryflagicons.com/FLAT/32/RU.png);
-}
-.us:before {
-  background-image: url(https://www.countryflagicons.com/FLAT/32/US.png);
-}
-.es:before {
-  background-image: url(https://www.countryflagicons.com/FLAT/32/ES.png);
-}
-.lang-menu:hover ul {
+
+/* Отображение опций при открытии списка */
+.custom-select.open .languageSelect {
   display: block;
-}
-.lang-menu a:active {
-  color: #000;
-}
-.lang-menu a:hover {
-  color: #000;
 }
 
 /*=========== Button Dark/Light ===========*/
@@ -200,10 +191,13 @@ body.dark-theme {
 }
 
 html {
+  width: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
+  width: 100%;
   margin: 0 0 var(--header-height) 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -281,7 +275,7 @@ img {
   height: 100%;
   background: radial-gradient(#ffffff, #eaeaea);
   z-index: var(--z-modal);
-  transition: all .09s ease-out;
+  transition: all 0.09s ease-out;
 }
 .preloader--hide {
   opacity: 0;
@@ -372,7 +366,7 @@ img {
 .wrapper span {
   position: absolute;
   top: 75px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 12px;
@@ -1021,6 +1015,8 @@ a.home__scroll-button:after {
   gap: 1.5rem;
   grid-template-columns: repeat(2, 1fr);
 }
+.services__content,
+.services__content,
 .services__content {
   position: relative;
   background-color: var(--container-color);
@@ -1029,8 +1025,10 @@ a.home__scroll-button:after {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   transition: 0.3s;
 }
+.services__content,
 .services__content:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15),
+    0 12px 20px -10px rgba(0, 0, 0, 0.15), 0 4px 20px -10px rgba(0, 0, 0, 0.15);
 }
 .services__icon {
   display: block;
@@ -1060,7 +1058,6 @@ a.home__scroll-button:after {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1075,6 +1072,7 @@ a.home__scroll-button:after {
   background-color: var(--container-color);
   padding: 1.5rem;
   border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 .serives__modal-services {
   row-gap: 1rem;
@@ -1166,20 +1164,26 @@ a.home__scroll-button:after {
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-0-5);
 }
-.portfolio__button {
+.lng-portfolio__button {
   color: var(--first-color);
-  font-size: var(--small-font-size);
+  font-size: var(--body-font);
   display: flex;
   align-items: center;
   column-gap: 0.25rem;
   cursor: pointer;
 }
+.lng-details-1,
+.lng-details-2,
+.lng-details-3,
+.lng-details-4{
+  order: -1; /* Порядок элемента "Details" */
+}
 .portfolio__button-icon {
   font-size: 1rem;
   transition: 0.3s;
 }
-.portfolio__button:hover .portfolio__button-icon {
-  transform: translate(0.25rem);
+.lng-portfolio__button:hover .portfolio__button-icon {
+  transform: translateX(0.25rem);
   pointer-events: none;
 }
 /* Active Item Portfolio */
@@ -1231,18 +1235,27 @@ a.home__scroll-button:after {
 .portfolio__popup-img {
   border-radius: 0.5rem;
 }
-.portfolio__popup-subtitle {
+.lng-portfolio__popup-subtitle-1,
+.lng-portfolio__popup-subtitle-2,
+.lng-portfolio__popup-subtitle-3,
+.lng-portfolio__popup-subtitle-4 {
   font-size: var(--smaller-font-size);
   margin-bottom: var(--mb-0-25);
 }
-.details__title {
+.lng-details__title-1 .lng-details__title-2,
+.lng-details__title-3,
+.lng-details__title-4 {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-1);
 }
-.details__description {
+.lng-details__description-1,
+.lng-details__description-2,
+.lng-details__description-3,
+.lng-details__description-4 {
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-2);
+  margin-top: var(--mb-0-5);
 }
 .details__info li {
   margin-bottom: var(--mb-0-75);
@@ -1399,7 +1412,7 @@ a.home__scroll-button:after {
 .input__container {
   position: relative;
   margin-top: 0.1rem;
-  margin-bottom: 1.9rem;
+  margin-bottom: 1.6rem;
 }
 .input {
   width: 100%;
@@ -1536,10 +1549,14 @@ textarea.input {
   font-size: var(--smaller-font-size);
   text-align: center;
 }
-.footer__privacy {
+.footer__privacy,
+.footer_reCaptcha {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.footer_reCaptcha {
+  padding: 16px 0 0 0;
 }
 .lng-privacy:hover {
   color: #fff;
@@ -1573,15 +1590,23 @@ textarea.input {
 .footer__link,
 .footer__social,
 .lng-privacy,
+.lng-recaptcha,
+.lng-term,
 .lng-footer__right,
 .lng-footer__copy {
   color: var(--title-color);
 }
 
-.buymeacoffee {
-  padding-bottom: 15px;
+/*==================== YOOMONEY ====================*/
+.yoomoney-btn {
+  position: relative;
+  padding: 40px 0 10px 0px;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
 }
 
+/*==================== LIVE INTERNET ====================*/
 .liveinternet {
   align-items: center;
   display: flex;
@@ -1640,6 +1665,15 @@ textarea.input {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--scroll-thumb-dark);
+}
+
+/*==================== Google reCaptcha ====================*/
+/* .grecaptcha-badge {
+  visibility: hidden;
+} */
+
+.g-recaptcha {
+  padding: 0 0 1.6rem 0;
 }
 
 /*==================== MEDIA QUERIES ====================*/
@@ -1788,6 +1822,15 @@ textarea.input {
   .services__modal {
     padding: 0 0.5rem;
   }
+  .services__modal-content {
+    width: 300px;
+    position: absolute;
+    background-color: var(--container-color);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: var(--z-tooltip);
+  }
   .lng-portfolio__all,
   .lng-portfolio__web,
   .lng-portfolio__app,
@@ -1884,17 +1927,18 @@ textarea.input {
     column-gap: 3rem;
     grid-template-columns: 2fr 1fr;
   }
-
+  .lng-services__brand {
+    margin-bottom: var(--mb-1-5);
+  }
   span.apk__size {
     display: block;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   span.apk__size {
     display: none;
   }
-
   .lang-menu ul {
     margin: 0;
     padding: 0;
@@ -1914,6 +1958,79 @@ textarea.input {
     bottom: 6.5rem;
     right: 20px;
   }
+  .lang-menu {
+    display: inline-block;
+    position: relative;
+  }
+
+  /* Стилизация самого выпадающего списка */
+  .custom-select {
+    position: relative;
+    font-size: 16px;
+  }
+
+  /* Стилизация выбранного элемента */
+  .selected-option {
+    padding: 8px 20px 8px 8px;
+    border: 1px solid var(--body-color);
+    border-radius: 4px;
+    background-color: var(--body-color);
+    color: var(--title-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Стилизация изображения флага в выбранном элементе */
+  .selected-option img {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+
+  /* Стилизация опций в выпадающем списке */
+  .languageSelect {
+    display: none;
+    position: absolute;
+    top: -320%;
+    left: 0;
+    right: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+    min-width: 150px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  /* Стилизация отдельной опции */
+  .option {
+    padding: 8px 20px 8px 8px;
+    border: 1px solid var(--body-color);
+    border-top: none;
+    background-color: var(--body-color);
+    color: var(--title-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Стилизация изображения флага в опции */
+  .option img {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+
+  /* Отображение опций при открытии списка */
+  .custom-select.open .languageSelect {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1921,11 +2038,9 @@ textarea.input {
     margin-left: auto;
     margin-right: auto;
   }
-
   body {
     margin: 0;
   }
-
   .section {
     padding: 6rem 1rem 2rem;
   }
@@ -2024,7 +2139,14 @@ textarea.input {
     padding: 6rem 2rem 2rem 2rem;
   }
   .services__modal-content {
-    width: 450px;
+    width: 230px;
+    height: 300px;
+    position: absolute;
+    background-color: var(--container-color);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: var(--z-tooltip);
   }
   .portfolio__container {
     grid-template-columns: repeat(2, 330px);
@@ -2159,6 +2281,16 @@ textarea.input {
   .contact__inputs {
     grid-template-columns: repeat(2, 1fr);
   }
+  .services__modal-content {
+    width: 240px;
+    height: 300px;
+    position: absolute;
+    background-color: var(--container-color);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: var(--z-tooltip);
+  }
   .portfolio__container {
     grid-template-columns: repeat(2, 330px);
     gap: 3rem;
@@ -2198,7 +2330,7 @@ textarea.input {
   .lng-footer__copy {
     font-size: var(--smaller-font-size);
     text-align: center;
-    color: #fff;
+    color: var(--title-color);
   }
   .footer__privacy {
     display: flex;

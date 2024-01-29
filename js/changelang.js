@@ -1,32 +1,119 @@
 /*======================== LANGUAGE SWITCHING MODE ========================*/
+const langmenu = document.querySelector(".languageSelect");
+const allLang = ["ru", "us", "es"];
 
-const select = document.querySelector('select');
-const allLang = ['ru', 'en', 'es'];
+langmenu.addEventListener("change", changeLanguage);
 
-select.addEventListener('change', changeURLLanguage);
-
-// перенаправить на url с указанием языка
-function changeURLLanguage(){
-   let lang = select.value;
-   location.href = window.location.pathname + '#' + lang;
-   location.reload();
+function changeLanguage() {
+  let lang = langmenu.value;
+  updateContent(lang);
 }
 
-function changeLanguage(){
-   let hash = window.location.hash;
-   hash = hash.substring(1);
-   console.log(hash);
-   if (!allLang.includes(hash)) {
-      location.href = window.location.pathname + '#ru';
-      location.reload();
-   }
-   select.value = hash;
-   for (let key in langArr) {
-      let elem = document.querySelector('.lng-' + key)
+function updateContent(lang) {
+  console.log("Selected language:", lang);
+
+  if (!allLang.includes(lang)) {
+    lang = "ru";
+  }
+
+  // Обновляем содержимое кнопок, которые имеют атрибут data-translate
+  const buttonsWithTranslation = document.querySelectorAll('[data-translate]');
+  buttonsWithTranslation.forEach(button => {
+    const buttonTextElement = button.querySelector(".lng-details");
+    if (buttonTextElement) {
+      buttonTextElement.textContent = langArr.details && langArr.details[lang] || "";
+    }
+  });
+
+  // Обновляем контент на странице
+  for (let key in langArr) {
+    if (Object.prototype.hasOwnProperty.call(langArr, key)) {
+      let elem = document.querySelector(".lng-" + key);
       if (elem) {
-         elem.innerHTML = langArr[key][hash];
+        elem.innerHTML = langArr[key][lang];
+        console.log(
+          "Updated element:",
+          key,
+          "with content:",
+          langArr[key][lang]
+        );
+      } else {
       }
-   }
+    }
+  }
 }
 
-changeLanguage();
+// Получаем текущий выбранный язык из localStorage при загрузке страницы
+document.addEventListener('DOMContentLoaded', function () {
+  const storedLang = localStorage.getItem('selectedLang');
+  const defaultLang = 'ru'; // Язык по умолчанию
+  const initialLang = storedLang || defaultLang;
+  updateContent(initialLang);
+
+  const customSelect = document.querySelector('.custom-select');
+  const selectedLangText = document.getElementById('selectedLangText');
+  const selectedLangFlag = document.getElementById('selectedLangFlag');
+  const options = document.querySelectorAll('.option');
+
+  customSelect.addEventListener('click', function (event) {
+    event.stopPropagation();
+    customSelect.classList.toggle('open');
+  });
+
+  options.forEach(function (option) {
+    option.addEventListener('click', function () {
+      const value = option.getAttribute('data-value');
+      selectedLangText.textContent = option.textContent.trim();
+      selectedLangFlag.src = option.querySelector('img').src;
+      customSelect.classList.remove('open');
+
+      // Сохраняем выбранный язык в localStorage
+      localStorage.setItem('selectedLang', value);
+
+      updateContent(value);
+    });
+  });
+
+  document.addEventListener('click', function (event) {
+    const target = event.target;
+    if (!customSelect.contains(target)) {
+      customSelect.classList.remove('open');
+    }
+  });
+
+  function updateContent(lang) {
+    console.log("Selected language:", lang);
+
+    if (!allLang.includes(lang)) {
+      lang = defaultLang;
+    }
+
+    // Обновляем контент на странице
+    for (let key in langArr) {
+      if (Object.prototype.hasOwnProperty.call(langArr, key)) {
+        let elem = document.querySelector(".lng-" + key);
+        if (elem) {
+          elem.innerHTML = langArr[key][lang];
+        } else {
+        }
+      }
+    }
+
+    // Обновляем флаг языка
+    const selectedLangFlag = document.getElementById('selectedLangFlag');
+    if (selectedLangFlag) {
+      selectedLangFlag.src = `https://i.ibb.co/${langArr.flagImages[lang]}.png`;
+    }
+
+    // Теперь динамически меняем текст внутри элемента с id "selectedLangText"
+    const selectedLangText = document.getElementById('selectedLangText');
+    if (selectedLangText) {
+      selectedLangText.textContent = langArr.selectedLangText[lang];
+    }
+
+    const inputElement = document.querySelector('[data-translate="lng-write-message"]');
+    if (inputElement) {
+      inputElement.placeholder = langArr['write-message'][lang];
+    }
+  }
+});

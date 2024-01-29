@@ -1,7 +1,9 @@
 import random
 import json
-
 import torch
+
+# Initialize a cache dictionary to store responses
+cache = {}
 
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
@@ -28,6 +30,10 @@ model.eval()
 bot_name = "Sam"
 
 def get_response(msg):
+    # Check if the response is in the cache
+    if msg in cache:
+        return cache[msg]
+
     sentence = tokenize(msg)
     X = bag_of_words(sentence, all_words)
     X = X.reshape(1, X.shape[0])
@@ -43,10 +49,15 @@ def get_response(msg):
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                return random.choice(intent['responses'])
+                response = random.choice(intent['responses'])
+                # Cache the response
+                cache[msg] = response
+                return response
 
-    return "I do not understand..."
-
+    response = "I do not understand..."
+    # Cache the response
+    cache[msg] = response
+    return response
 
 if __name__ == "__main__":
     print("Let's chat! (type 'quit' to exit)")
@@ -58,4 +69,3 @@ if __name__ == "__main__":
 
         resp = get_response(sentence)
         print(resp)
-
