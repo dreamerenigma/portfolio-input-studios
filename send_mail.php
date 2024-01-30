@@ -6,7 +6,7 @@
   require "PHPMailer/src/PHPMailer.php";
   require "PHPMailer/src/Exception.php";
 
-  define('SMARTCAPTCHA_SERVER_KEY', '<server_key>');
+  define('SMARTCAPTCHA_SERVER_KEY', 'your_server_key');
 
   function check_captcha($token) {
     $ch = curl_init();
