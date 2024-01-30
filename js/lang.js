@@ -410,8 +410,8 @@ const langArr = {
     es: "Diseño",
   },
   "portfolio__web-card": {
-    ru: "Веб Дизайн",
-    us: "Web Design",
+    ru: "Веб дизайн",
+    us: "Web design",
     es: "Diseño web",
   },
   "details-1": {
@@ -421,8 +421,8 @@ const langArr = {
   },
   "portfolio__popup-subtitle-1": {
     ru: "Рекомендуемое — Дизайн",
-    us: "Featured - Design",
-    es: "Destacado - Diseño",
+    us: "Featured — Design",
+    es: "Destacado — Diseño",
   },
   "details__title-1": {
     ru: "Дизайн сайта онлайн кинотеатра КиноДом Онлайн",
@@ -430,29 +430,29 @@ const langArr = {
     es: "Diseño de sitio web para el cine online KinoDom Online",
   },
   "details__description-1": {
-    ru: "КиноДом Онлайн – это уникальное пространство для ценителей кинематографа, где вы можете наслаждаться широким выбором фильмов и сериалов прямо из уюта своего дома.",
+    ru: "КиноДом Онлайн — это уникальное пространство для ценителей кинематографа, где вы можете наслаждаться широким выбором фильмов и сериалов прямо из уюта своего дома.",
     us: "KinoDom Online is a unique space for cinema lovers, where you can enjoy a wide selection of films and TV series right from the comfort of your home.",
     es: "KinoDom Online es un espacio único para los amantes del cine, donde podrás disfrutar de una amplia selección de películas y series de TV desde la comodidad de tu hogar.",
   },
   "created-details-1": {
-    ru: "Создано - 20 авг. 2022 г.",
-    us: "Created - 20 aug 2022",
-    es: "Creado - 20 de agosto de 2022",
+    ru: "Создано — 20 авг. 2022 г.",
+    us: "Created — 20 aug 2022",
+    es: "Creado — 20 de agosto de 2022",
   },
   "techologies-details-1": {
-    ru: "Технологии - HTML, CSS, PHP",
-    us: "Techologies - HTML, CSS, PHP",
-    es: "Tecnología - HTML, CSS, PHP",
+    ru: "Технологии — HTML, CSS, PHP",
+    us: "Techologies — HTML, CSS, PHP",
+    es: "Tecnología — HTML, CSS, PHP",
   },
   "role-details-1": {
     ru: "Роль — Fullstack-разработчик",
-    us: "Role - Fullstack developer",
-    es: "Rol - Desarrollador Fullstack",
+    us: "Role — Fullstack developer",
+    es: "Rol — Desarrollador Fullstack",
   },
   "view-details-1": {
-    ru: "Посмотреть - ",
-    us: "Look - ",
-    es: "Mirar - ",
+    ru: "Посмотреть — ",
+    us: "View — ",
+    es: "Vista — ",
   },
   "portfolio__app-card-2": {
     ru: "Дизайн приложения",
@@ -466,8 +466,8 @@ const langArr = {
   },
   "portfolio__popup-subtitle-2": {
     ru: "Рекомендуемое — Дизайн",
-    us: "Featured - Design",
-    es: "Destacado - Diseño",
+    us: "Featured — Design",
+    es: "Destacado — Diseño",
   },
   "details__title-2": {
     ru: "Приложение для бесплатного общения Диалог Мессенджер",
@@ -480,19 +480,19 @@ const langArr = {
     es: "Aplicación de chat con funciones completamente gratuitas para mensajería, videochats, llamadas de voz, mensajes grupales, edición de fotos de perfil, estado de perfil.",
   },
   "created-details-2": {
-    ru: "Создано – В работе",
-    us: "Created - Work in Progress",
-    es: "Creado - Trabajo en progreso",
+    ru: "Создано — В работе",
+    us: "Created — Work in Progress",
+    es: "Creado — Trabajo en progreso",
   },
   "techologies-details-2": {
-    ru: "Технологии - Котлин",
-    us: "Techologies - Kotlin",
-    es: "Tecnologías - Kotlin",
+    ru: "Технологии — Котлин",
+    us: "Techologies — Kotlin",
+    es: "Tecnologías — Kotlin",
   },
   "role-details-2": {
     ru: "Роль — Fullstack-разработчик",
-    us: "Role - Fullstack developer",
-    es: "Rol - Desarrollador Fullstack",
+    us: "Role — Fullstack developer",
+    es: "Rol — Desarrollador Fullstack",
   },
   "portfolio__design-card": {
     ru: "Фирменный дизайн",
@@ -506,8 +506,8 @@ const langArr = {
   },
   "portfolio__popup-subtitle-3": {
     ru: "Рекомендуемое — Дизайн",
-    us: "Featured - Design",
-    es: "Destacado - Diseño",
+    us: "Featured — Design",
+    es: "Destacado — Diseño",
   },
   "details__title-3": {
     ru: "Приложение для доставки еды не выходя из дома",
@@ -515,24 +515,24 @@ const langArr = {
     es: "Solicitud de entrega de comida sin salir de casa",
   },
   "details__description-3": {
-    ru: "Приложение Food Delivery предоставляет удобный способ заказа еды онлайн и ее доставки прямо к вашему дверному порогу. С этим приложением пользователи могут легко выбирать блюда из разнообразных ресторанов, кафе и закусочных в своем районе, оформлять заказы и наслаждаться свежей и вкусной едой без необходимости выхода из дома.",
-    us: "The Food Delivery app provides a convenient way to order food online and have it delivered right to your doorstep. With this app, users can easily select food from a variety of restaurants, cafes and eateries in their area, place orders and enjoy fresh and delicious food without having to leave home.",
-    es: "La aplicación Food Delivery proporciona una forma conveniente de pedir comida en línea y recibirla directamente en la puerta de su casa. Con esta aplicación, los usuarios pueden seleccionar fácilmente comida de una variedad de restaurantes, cafeterías y comedores en su área, realizar pedidos y disfrutar de comida fresca y deliciosa sin tener que salir de casa.",
+    ru: "Приложение Food Delivery предоставляет удобный способ заказа еды онлайн и ее доставки к вашему дому. С этим приложением пользователи могут легко выбирать блюда из разнообразных ресторанов, кафе и закусочных, оформлять заказы и наслаждаться свежей и вкусной едой без необходимости выхода из дома.",
+    us: "The Food Delivery app provides a convenient way to order food online and have it delivered to your home. With this app, users can easily select food from a variety of restaurants, cafes and eateries, place orders and enjoy fresh and delicious food without having to leave their home.",
+    es: "La aplicación Food Delivery proporciona una forma conveniente de pedir comida en línea y recibirla en su hogar. Con esta aplicación, los usuarios pueden seleccionar fácilmente comida de una variedad de restaurantes, cafeterías y comedores, realizar pedidos y disfrutar de comida fresca y deliciosa sin tener que salir de casa.",
   },
   "created-details-3": {
-    ru: "Создано – В работе",
-    us: "Created - Work in Progress",
-    es: "Creado - Trabajo en progreso",
+    ru: "Создано — В работе",
+    us: "Created — Work in Progress",
+    es: "Creado — Trabajo en progreso",
   },
   "techologies-details-3": {
-    ru: "Технологии - Dart",
-    us: "Techologies - Dart",
-    es: "Tecnologías - Dart",
+    ru: "Технологии — Dart",
+    us: "Techologies — Dart",
+    es: "Tecnologías — Dart",
   },
   "role-details-3": {
     ru: "Роль — Fullstack-разработчик",
-    us: "Role - Fullstack developer",
-    es: "Rol - Desarrollador Fullstack",
+    us: "Role — Fullstack developer",
+    es: "Rol — Desarrollador Fullstack",
   },
   "portfolio__app-card-4": {
     ru: "Дизайн приложения",
@@ -546,8 +546,8 @@ const langArr = {
   },
   "portfolio__popup-subtitle-4": {
     ru: "Рекомендуемое — Дизайн",
-    us: "Featured - Design",
-    es: "Destacado - Diseño",
+    us: "Featured — Design",
+    es: "Destacado — Diseño",
   },
   "details__title-4": {
     ru: "Музыкальный плеер для вопроизведения любых форматов аудио с эквалайзером",
@@ -555,24 +555,24 @@ const langArr = {
     es: "Reproductor de música para reproducir cualquier formato de audio con ecualizador",
   },
   "details__description-4": {
-    ru: "Maestro - это инновационное музыкальное приложение для платформы Android, созданное для истинных ценителей музыки. Приложение предоставляет уникальный опыт в управлении и прослушивании музыки, объединяя в себе элегантный интерфейс, передовые технологии и разнообразные функциональные возможности.",
-    us: "Maestro is an innovative music application for the Android platform, created for true music lovers. The app provides a unique experience in managing and listening to music, combining an elegant interface, advanced technology and rich functionality.",
-    es: "Maestro es una innovadora aplicación de música para la plataforma Android, creada para verdaderos amantes de la música. La aplicación proporciona una experiencia única en la gestión y escucha de música, combinando una interfaz elegante, tecnología avanzada y una rica funcionalidad.",
+    ru: "Maestro — это инновационное музыкальное приложение для платформы Android, созданное для истинных ценителей музыки. Приложение предоставляет уникальный опыт в управлении и прослушивании музыки, объединяя в себе элегантный интерфейс и передовые технологии.",
+    us: "Maestro is an innovative music application for the Android platform, created for true music lovers. The app provides a unique experience in managing and listening to music, combining an elegant interface and advanced technology.",
+    es: "Maestro es una innovadora aplicación de música para la plataforma Android, creada para verdaderos amantes de la música. La aplicación proporciona una experiencia única en la gestión y escucha de música, combinando una interfaz elegante y tecnología avanzada.",
   },
   "created-details-4": {
-    ru: "Создано – 14 июля 2023 г.",
-    us: "Created – July 14, 2023",
-    es: "Creado – 14 de julio de 2023",
+    ru: "Создано — 14 июля 2023 г.",
+    us: "Created — July 14, 2023",
+    es: "Creado — 14 de julio de 2023",
   },
   "techologies-details-4": {
-    ru: "Технологии - Котлин",
-    us: "Techologies - Kotlin",
-    es: "Tecnologías - Kotlin",
+    ru: "Технологии — Котлин",
+    us: "Techologies — Kotlin",
+    es: "Tecnologías — Kotlin",
   },
   "role-details-4": {
     ru: "Роль — Fullstack-разработчик",
-    us: "Role - Fullstack developer",
-    es: "Rol - Desarrollador Fullstack",
+    us: "Role — Fullstack developer",
+    es: "Rol — Desarrollador Fullstack",
   },
   project__title: {
     ru: "У вас новый проект",
@@ -725,9 +725,9 @@ const langArr = {
     es: "Política de privacidad",
   },
   recaptcha: {
-    ru: "Этот сайт защищен reCAPTCHA и Google,",
-    us: "This site is protected by reCAPTCHA and the Google,",
-    es: "Este sitio está protegido por reCAPTCHA y Google,",
+    ru: "Этот сайт защищен reCAPTCHA от Яндекс,",
+    us: "This site is protected by reCAPTCHA from Yandex,",
+    es: "Este sitio está protegido por reCAPTCHA de Yandex,",
   },
   term: {
     ru: "&nbsp;и Условия использования",

@@ -9,40 +9,6 @@ function changeLanguage() {
   updateContent(lang);
 }
 
-function updateContent(lang) {
-  console.log("Selected language:", lang);
-
-  if (!allLang.includes(lang)) {
-    lang = "ru";
-  }
-
-  // Обновляем содержимое кнопок, которые имеют атрибут data-translate
-  const buttonsWithTranslation = document.querySelectorAll('[data-translate]');
-  buttonsWithTranslation.forEach(button => {
-    const buttonTextElement = button.querySelector(".lng-details");
-    if (buttonTextElement) {
-      buttonTextElement.textContent = langArr.details && langArr.details[lang] || "";
-    }
-  });
-
-  // Обновляем контент на странице
-  for (let key in langArr) {
-    if (Object.prototype.hasOwnProperty.call(langArr, key)) {
-      let elem = document.querySelector(".lng-" + key);
-      if (elem) {
-        elem.innerHTML = langArr[key][lang];
-        console.log(
-          "Updated element:",
-          key,
-          "with content:",
-          langArr[key][lang]
-        );
-      } else {
-      }
-    }
-  }
-}
-
 // Получаем текущий выбранный язык из localStorage при загрузке страницы
 document.addEventListener('DOMContentLoaded', function () {
   const storedLang = localStorage.getItem('selectedLang');
@@ -94,9 +60,22 @@ document.addEventListener('DOMContentLoaded', function () {
         let elem = document.querySelector(".lng-" + key);
         if (elem) {
           elem.innerHTML = langArr[key][lang];
+          console.log(
+            "Updated element:",
+            key,
+            "with content:",
+            langArr[key][lang]
+          );
         } else {
         }
       }
+    }
+
+    const linkElement = document.querySelector('.lng-view-details-1 a');
+    if (linkElement) {
+      const linkTranslationKey = "view-details-1";
+      const linkTranslation = langArr[linkTranslationKey] && langArr[linkTranslationKey][lang];
+      linkElement.textContent = linkTranslation;
     }
 
     // Обновляем флаг языка
@@ -116,4 +95,27 @@ document.addEventListener('DOMContentLoaded', function () {
       inputElement.placeholder = langArr['write-message'][lang];
     }
   }
+
+  // Обновляем содержимое кнопок, которые имеют атрибут data-translate
+  const buttonsWithTranslation = document.querySelectorAll('[data-translate]');
+  buttonsWithTranslation.forEach(button => {
+    const buttonTextElement = button.querySelector(".lng-details");
+    if (buttonTextElement) {
+      buttonTextElement.textContent = langArr.details && langArr.details[lang] || "";
+    }
+  });
+
+  const readMoreLink = document.querySelector('.lng-button-read-more');
+    if (readMoreLink) {
+      const cookiePolicyURL = `https://inputstudios.ru/cookie_policy-${lang}.html`;
+
+      // Handle click event
+      readMoreLink.addEventListener('click', function (event) {
+        // Prevent the default behavior (navigation)
+        event.preventDefault();
+
+        // Open the cookie policy page based on the selected language
+        window.open(cookiePolicyURL, '_blank');
+      });
+    }
 });

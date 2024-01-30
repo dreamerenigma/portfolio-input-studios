@@ -26,6 +26,7 @@
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 70%);
   --scroll-thumb-dark: hsl(var(--hue-color), 12%, 40%);
   --button-color: hsl(var(--hue-color), 0, 100%);
+  --link-color: hsl(var(--hue-color), 20%, 35%);
 
   /*=========== Font and typography ===========*/
   --body-font: "Poppins", sans-serif;
@@ -751,6 +752,8 @@ a.home__scroll-button:after {
   padding: 1rem;
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
+  margin-top: var(--mb-0-5);
+  width: max-content;
 }
 .button:hover {
   background-color: var(--first-color-alt);
@@ -1155,8 +1158,17 @@ a.home__scroll-button:after {
   margin-bottom: var(--mb-1);
 }
 .lng-portfolio__web-card,
-.lng-portfolio__app-card {
+.lng-portfolio__app-card-2,
+.lng-portfolio__design-card,
+.lng-portfolio__app-card-4 {
   color: #fff;
+}
+
+.lng-details__title-1,
+.lng-details__title-2,
+.lng-details__title-3,
+.lng-details__title-4 {
+  color: var(--text-color);
 }
 
 .portfolio__title {
@@ -1175,7 +1187,7 @@ a.home__scroll-button:after {
 .lng-details-1,
 .lng-details-2,
 .lng-details-3,
-.lng-details-4{
+.lng-details-4 {
   order: -1; /* Порядок элемента "Details" */
 }
 .portfolio__button-icon {
@@ -1259,7 +1271,6 @@ a.home__scroll-button:after {
 }
 .details__info li {
   margin-bottom: var(--mb-0-75);
-  text-transform: capitalize;
   font-size: var(--small-font-size);
 }
 .details__info li:last-child {
@@ -1279,6 +1290,15 @@ a.home__scroll-button:after {
   display: flex;
   justify-content: left;
   text-decoration: none;
+}
+
+.lng-view-details-1 {
+  display: inline;
+}
+
+.language-link-text {
+  margin-right: 5px;
+  font-size: var(--normal-font-size);
 }
 
 /*==================== PROJECT IN MIND ====================*/
@@ -1487,6 +1507,68 @@ textarea.input {
 }
 .input__container.focus span::before,
 .input__container.focus span::after {
+  width: 50%;
+  opacity: 1;
+}
+
+.input__container-message {
+  position: relative;
+  margin-top: 0.1rem;
+  margin-bottom: 0.2rem;
+}
+.input__container-message label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  padding: 0 0.4rem;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: var(--font-medium);
+  pointer-events: none;
+  z-index: var(--z-tooltip);
+  transition: 0.5s;
+}
+.input__container-message.textarea label {
+  top: 1rem;
+  transform: translateY(0);
+}
+.input__container-message span {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  color: transparent;
+  transform: translateY(-50%);
+  font-size: var(--small-font-size);
+  padding: 0 0.4rem;
+  pointer-events: none;
+}
+.input__container-message span::before,
+.input__container-message span::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 5px;
+  opacity: 0;
+  background-color: var(--body-color);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+.input__container-message span::before {
+  left: 50%;
+}
+.input__container-message span::after {
+  right: 50%;
+}
+.input__container-message.focus label {
+  top: 0;
+  transform: translateY(-50%);
+  left: 25px;
+  font-size: var(--smaller-font-size);
+}
+.input__container-message.focus span::before,
+.input__container-message.focus span::after {
   width: 50%;
   opacity: 1;
 }
@@ -1846,10 +1928,6 @@ textarea.input {
     grid-template-columns: 2fr;
   }
 
-  span.apk__size {
-    display: none;
-  }
-
   .project__img {
     width: 200px;
   }
@@ -1875,7 +1953,7 @@ textarea.input {
   .portfolio__popup-content {
     align-items: center;
     column-gap: 3rem;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr;
   }
 }
 
@@ -1887,6 +1965,15 @@ textarea.input {
   }
   span.apk__size {
     display: none;
+  }
+}
+
+@media screen and (max-width: 591px) {
+  .footer__privacy,
+  .footer_reCaptcha {
+    display: block;
+    margin-left: 0;
+    text-align: center;
   }
 }
 
@@ -1937,7 +2024,7 @@ textarea.input {
 
 @media screen and (max-width: 767px) {
   span.apk__size {
-    display: none;
+    display: block;
   }
   .lang-menu ul {
     margin: 0;
@@ -1962,13 +2049,11 @@ textarea.input {
     display: inline-block;
     position: relative;
   }
-
   /* Стилизация самого выпадающего списка */
   .custom-select {
     position: relative;
     font-size: 16px;
   }
-
   /* Стилизация выбранного элемента */
   .selected-option {
     padding: 8px 20px 8px 8px;
@@ -1980,7 +2065,6 @@ textarea.input {
     display: flex;
     justify-content: space-between;
   }
-
   /* Стилизация изображения флага в выбранном элементе */
   .selected-option img {
     width: 20px;
@@ -1988,7 +2072,6 @@ textarea.input {
     margin-left: 5px;
     margin-right: 10px;
   }
-
   /* Стилизация опций в выпадающем списке */
   .languageSelect {
     display: none;
@@ -2003,7 +2086,6 @@ textarea.input {
     flex-direction: column;
     justify-content: flex-start;
   }
-
   /* Стилизация отдельной опции */
   .option {
     padding: 8px 20px 8px 8px;
@@ -2018,7 +2100,6 @@ textarea.input {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-
   /* Стилизация изображения флага в опции */
   .option img {
     width: 20px;
@@ -2026,10 +2107,21 @@ textarea.input {
     margin-left: 5px;
     margin-right: 10px;
   }
-
   /* Отображение опций при открытии списка */
   .custom-select.open .languageSelect {
     display: block;
+  }
+  .grecaptcha-badge {
+    width: 256px !important;
+    height: 60px !important;
+    display: block !important;
+    transition: right 0.3s ease 0s !important;
+    position: fixed !important;
+    bottom: 50px !important;
+    right: -186px !important;
+    box-shadow: gray 0px 0px 5px !important;
+    border-radius: 2px !important;
+    overflow: hidden !important;
   }
 }
 
@@ -2159,7 +2251,7 @@ textarea.input {
     align-items: center;
   }
   span.apk__size {
-    display: none;
+    display: block;
   }
 
   .project {

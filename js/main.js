@@ -345,12 +345,19 @@ themeButton.addEventListener('click', () => {
 /*======================== PRELOADER ========================*/
 preloader.classList.add('preloader--hide')
 
-/*======================== reCAPTCHA v3 ========================*/
-function validateForm() {
-  grecaptcha.ready(function() {
-    grecaptcha.execute('6LcFQ5coAAAAAMMM7LDW3aXZFd3yJxYZ3ac9XXWl', {action: 'submit'}).then(function(token) {
-      // Добавьте отправку формы с токеном reCAPTCHA
-      document.form.submit();
+/*======================== Yandex reCAPTCHA ========================*/
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the SmartCaptcha container
+  const captchaContainer = document.getElementById("captcha-container");
+
+  // Get the "Send Message" button
+  const sendMessageButton = document.getElementById("button");
+
+  // Attach a click event listener to the button
+  sendMessageButton.addEventListener("click", function () {
+    // Initialize SmartCaptcha
+    window.smartcaptcha.render(captchaContainer, {
+      // Any additional options you want to pass
     });
   });
-}
+});
